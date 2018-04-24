@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href= "https://bootswatch.com/4/lux/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <a class="navbar-brand" href="#">Abis Blog</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarColor02">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#blog">Blog Posts</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#about">About</a>
+                            </li>
+                          </ul>
+                          <!-- <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                          </form> -->
+                        </div>
+                      </nav>
+        </header>
+
+<div id="app">
+
+</div>
+
+
+
+      <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+       <!-- if you need to load your js before so it is part of the view.
+        can put script tags on js .. async means don't block.. load asysnc .. come off of main thread 
+        we need to load them but not necisarry before we can show users above the fold.
+        defer is the other tag .. does same thing as async but does it only after the page loads and in order of the html/ in order of apperance
+        -->
+        <script src= "JS/app.js" charset="utf-8"></script>
+        
+    </body>
+</html>
