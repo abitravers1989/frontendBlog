@@ -21,9 +21,25 @@ function showResults(jsonDataResult){
     //console.log(result)
     jsonDataResult.results.forEach(person => {
         //console.log("working?")
-         console.log(person.name)   })   
+         console.log(person.name) 
+         html +=
+         
+         `<h3>${person.name}</h3>`
+        
+        
+        
+        }) 
+        
+        resultsSection.innerHTML = html;
     };
 
-    //console.log(jsonDataResult.results)
-    //jsonDataResult.forEach(person => {
-       // console.log(person.name) 
+     
+
+
+    // <div class="card" style="width: 18rem;">
+    // <img class="card-img-top" alt="Card image cap">
+    // <div class="card-body">
+    //   <h5 class="card-title">Card title</h5>
+    //   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    //   <a href="#" class="btn btn-primary">Go somewhere</a>
+    // </div>
