@@ -1,6 +1,7 @@
 console.log("loaded")
 
 //getting error because chrome does not allow localHost to localHost 
+//fetch('http://localhost:5000/api/tweets')
 fetch('https://swapi.co/api/people/')
 .then(response => response.json())
 .then(jsonData => showResults(jsonData))
