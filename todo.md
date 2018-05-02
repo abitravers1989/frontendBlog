@@ -1,6 +1,9 @@
 make footer responsive .. and in jumbotron ?
 improve top nav 
 connect to real api 
+use css grid
+
+http://blackpizza.com/blog/
 
 fix nav 
 
