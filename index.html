@@ -9,6 +9,50 @@
         
         <style>
 
+          .wrapper{
+            display: grid;
+            /* grid-template-columns: 40% 40% 30%; */
+
+           /* grid-column-gap: 1em;
+            grid-row-gap: 1em; */
+            grid-gap: 1em;
+
+            /* grid-template-columns: 1fr 2fr 1fr; */
+
+            grid-template-columns: repeat(3, 1fr);
+            /* below makes it a fixed size  */
+            /* grid-auto-rows: 100px; */
+
+            /* this is flexible: */
+            grid-auto-rows: minmax(100px, auto)
+            /* by default 100px but will stretch out .. only targeting first row that fall within repeat which is first 3 */
+
+          }
+
+          .nested{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 70px;
+            grid-gap: 1em;
+          }
+
+        .wrapper > div{
+          background:#eee;
+            padding:1em;
+         }
+
+
+          .wrapper > div:nth-child(odd){
+            background:#ddd;
+            padding:1em;
+            }
+
+            .nested > div{
+              border:#002C4C 1px solid;
+              padding: 1em;
+
+            }
+
 
           :root {
 
@@ -69,23 +113,6 @@
 
         
         </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </head>
     <body>
         <header>
@@ -115,6 +142,27 @@
                       </nav>
         </header>
 
+        <div class="wrapper">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi veritatis culpa, assumenda maiores deleniti eius odit ducimus repellat neque quo officiis 
+             </div>
+
+             <div class="nested">
+               <div> Nested div </div>
+               <div> Nested div </div>
+               <div> Nested div </div>
+             </div>
+        
+<div>
+    this is me learn css grid
+  </div>
+
+<div>Hi my blog is about the things I learn while coding.  </div>
+
+<div>
+this is me learn css grid
+</div>
+
+</div>
 
 <div>
   <section class="mt-5" id="results"></section>
@@ -157,6 +205,7 @@
         <img class="slice-footer" src="http://blackpizza.com/wp-content/uploads/2014/12/slice-pizza.png" alt="Pizz and love" /> 
       </div>
       <div class="col-lg-4 col-md-4"></div>
+      <h4> Social Media Links</h4>
     </div>
   </div>
 </div>
