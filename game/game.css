@@ -1,0 +1,29 @@
+#mustache {
+    background: #f00;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+}
+
+:root {
+
+    --lightgrey: #F7F7F7;
+    --darkblue: #00151C;
+    --blue: #002C4C;
+    --midblue: #17A6D6;
+    --lighblue: #17A6D6;
+
+    --white: #fff;
+    --blue: #1f2a5b;
+    --grey:  #f7f7f8;
+        
+}
+
+
+
+body {
+    background: var(--blue);  
+}
+
+
