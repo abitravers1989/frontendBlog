@@ -18,13 +18,29 @@
 </head>
 
 <body>
-   <div class="mustache"></div>
-   <div class="line"></div>
+   <div class="mustache" hidden ></div>
+
+   <button class="open-button">Sart Game</button>
+   
+
+<!-- <div class="popup" hidden>
+    <h1>Hello</h1>
+    <p> I am a popup </p>
+    <button class= "close-button"></button>
+</div> -->
+
+
+
 </body>
 
 <script>
 
-const mustache = document.getElementById('mustache');
+const mustache = document.querySelector('.mustache');
+const openButton = document.querySelector('.open-button');
+
+openButton.addEventListener('click', function(){
+    mustache.removeAttribute('hidden');
+})
 
 </script>
 </html>
