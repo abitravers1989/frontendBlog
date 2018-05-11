@@ -38,13 +38,31 @@ fetch('http://localhost:5000/posts')
 //     return response.json();
 //   })
   .then(response => response.json())
-  .then(function(myJson) {
-    console.log(myJson[0].Content);
-  })
+//   .then(function(myJson) {
+//     console.log(myJson[0].Content);
+//   })
+.then(jsonResponse => showResults(jsonResponse))
   .catch(function(error)
 {
     console.log(error)
 });
+
+
+function showResults(jsonData){
+    const resultsSection = document.querySelector('#results')
+        resultsSection.innerHTML = '';
+        let html = '';
+        jsonData.forEach(post => {
+            html +=
+            console.log(post)
+         
+         `<h3>${post.content}:            ${post.postTime}   </h3>`
+        
+        });
+       
+        resultsSection.innerHTML = html;
+
+}
 
 // .then(response => response.json())
 
