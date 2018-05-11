@@ -1,64 +1,76 @@
-:root {
+<style>
 
-    --lightgrey: #F7F7F7;
-    --darkblue: #00151C;
-    --blue: #002C4C;
-    --midblue: #17A6D6;
-    --lighblue: #17A6D6;
+      .container{
+          height: 800px;
+          width: 900px;
+          outline: 1px solid black;
+          position: relative;
+      }
 
-    --white: #fff;
-    --blue: #1f2a5b;
-    --grey:  #f7f7f8;
+ 
 
+      .guy{
+          position: absolute;
+          height: 50px;
+          width: 50px;
+          outline: 1px solid black;
+          background-color: red;
+          left: 0;
+      }
+  
+  </style>
+
+</head>
+
+<body>
+   
+
+   <button class="open-button">Sart Game</button>
+
+   <div class="container">
+     <div class="mustache"></div>
+     <div class="guy"></div>
+     <!-- <div class="mustache" hidden ></div> -->
+   </div>
+
+   
+</body>
+
+<script>
+
+
+const container = document.querySelector('.container');
+const mustache = document.querySelector('.mustache');
+const guy = document.querySelector('.guy');
+
+var guyleft = 0;
+
+function animate(e){
+    if(e.keyCode ==39){
+        guyleft += 2;
+        guy.style.left = guyleft + 'px';
+        // if (guyleft<=600){
+        //     guyleft -=2;
+        // }
+    }
+    if(e.keyCode ==37){
+        guyleft -= 2;
+        guy.style.left = guyleft + 'px';
+        // if (guyleft<=0){
+        //     guyleft +=2;
+        // }
+    }
 }
 
-body {
-    background: var(--blue);  
-}
-
-.mustache{
-    
-    width: 180px;
-    height: 180px;
-    left: 100px;
-    border-radius: 50%;
-    position: absolute;
-    margin: 10%;
-
-    color: var(--white);
-
-    box-shadow: 
-    150px 240px 0 0 currentColor,
-    300px 240px 0 0 currentColor;
-}
-
-.mustache::before {
-    content: "";
-    position: absolute;
-    left: 30px;
-    top: 120px;
-
-    width: 210px;
-    height: 120px;
-    border-bottom: solid 180px currentColor;   
-    border-radius: 0 0 0 100%;
-
-    transform: rotate(-40deg);
-    transform-origin: right 210px;
-}
+document.onkeydown = animate;
 
 
-.mustache::after{
-    content: "";
-    position: absolute;
-    left: 390px;
-    top: 120px;
+const openButton = document.querySelector('.open-button');
 
-    width: 210px;
-    height: 120px;
-    border-bottom: solid 180px currentColor;   
-    border-radius: 0 0 100% 0;
+openButton.addEventListener('click', function(){
+    mustache.removeAttribute('hidden');
+})
 
-    transform: rotate(40deg);
-    transform-origin: left 210px;
-}
+mustache.addEventListener('click', function(){
+
+})

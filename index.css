@@ -1,0 +1,83 @@
+          .wrapper{
+            display: grid;
+            /* grid-template-columns: 40% 40% 30%; */
+
+           /* grid-column-gap: 1em;
+            grid-row-gap: 1em; */
+            grid-gap: 1em;
+
+            /* grid-template-columns: 1fr 2fr 1fr; */
+
+            grid-template-columns: repeat(3, 1fr);
+            /* below makes it a fixed size  */
+            /* grid-auto-rows: 100px; */
+
+            /* this is flexible: */
+            grid-auto-rows: minmax(100px, auto)
+            /* by default 100px but will stretch out .. only targeting first row that fall within repeat which is first 3 */
+
+          }
+
+         
+        .wrapper > div{
+          background:#eee;
+            padding:1em;
+         }
+
+
+          .wrapper > div:nth-child(odd){
+            background:#ddd;
+            padding:1em;
+            }
+
+
+
+        :root {
+
+            --lightgrey: #F7F7F7;
+            --darkblue: #00151C;
+            --blue: #002C4C;
+            --midblue: #17A6D6;
+            --lighblue: #17A6D6;
+
+        }
+        
+        .body {
+                
+             font-size: 1rem;
+            min-height: 100vh;
+                align-items: center; 
+                background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+
+              }
+
+              #results {
+                margin: 5%;
+                font-family: 'Gaegu', cursive;
+                font-size: 6rem;
+                
+              }
+              navbar {
+                background: var(--darkblue);
+              }
+              /* #footer {
+                margin: 3%;
+              } */
+              .footer .credits {
+                  font-family: 'ProximaNovaBlack', helvetica, arial, sans-serif; 
+                   font-weight:normal;
+               
+              }
+
+            .footer-white {
+                color:#fff;
+              font-weight:normal;
+              margin: 0.5%;
+              float: right;
+                width: 300px;
+                padding: 10px;
+               
+            }
+
+
+        

@@ -10,6 +10,9 @@ connect to real api
 results of blog displayed in responsive cards built with css grid (possible desing :http://blackpizza.com/blog/)
 
 
+
+paralex scroll: http://www.madwell.com/
+https://ihatetomatoes.net/simple-parallax-scrolling-tutorial/
 on hovver title pops up larger and changes color 
 
 

@@ -1,38 +1,82 @@
-console.log("loaded")
 
-//getting error because chrome does not allow localHost to localHost 
-//fetch('http://localhost:5000/api/tweets')
-fetch('https://swapi.co/api/people/')
-.then(response => response.json())
-.then(jsonData => showResults(jsonData))
-.catch(function(error)
+// fetch('https://swapi.co/api/people/')
+// .then(response => response.json())
+// .then(jsonData => showResults(jsonData))
+// .catch(function(error)
+// {
+//     console.log(error)
+// })
+
+// //look into how to add no-cors in the fetch.
+
+
+// function showResults(jsonDataResult){
+//     const resultsSection = document.querySelector('#results')
+//     resultsSection.innerHTML = '';
+//     let html = '';
+//     console.log(jsonDataResult.results[0])
+//     //let results = jsonDataResult.results
+//     //console.log(result)
+//     jsonDataResult.results.forEach(person => {
+//         //console.log("working?")
+//          console.log(person.name) 
+//          html +=
+         
+//          `<h3>${person.mass}:            ${person.name}   </h3>`
+        
+        
+        
+//         }) 
+        
+//         resultsSection.innerHTML = html;
+//     };
+
+
+
+fetch('http://localhost:5000/posts')
+// .then(function(response) {
+//     return response.json();
+//   })
+  .then(response => response.json())
+  .then(function(myJson) {
+    console.log(myJson[0].Content);
+  })
+  .catch(function(error)
 {
     console.log(error)
-})
+});
 
-//look into how to add no-cors in the fetch.
+// .then(response => response.json())
+
+// .then(jsonData => showResults(jsonData))
+// .catch(function(error)
+// {
+//     console.log(error)
+// })
+
+// //look into how to add no-cors in the fetch.
 
 
-function showResults(jsonDataResult){
-    const resultsSection = document.querySelector('#results')
-    resultsSection.innerHTML = '';
-    let html = '';
-    console.log(jsonDataResult.results[0])
-    //let results = jsonDataResult.results
-    //console.log(result)
-    jsonDataResult.results.forEach(person => {
-        //console.log("working?")
-         console.log(person.name) 
-         html +=
+// function showResults(jsonDataResult){
+//     const resultsSection = document.querySelector('#results')
+//     resultsSection.innerHTML = '';
+//     let html = '';
+//     console.log(jsonDataResult.results)
+//     //let results = jsonDataResult.results
+//     //console.log(result)
+//     jsonDataResult.results.forEach(person => {
+//         //console.log("working?")
+//          console.log(person.content) 
+//          html +=
          
-         `<h3>${person.mass}:            ${person.name}   </h3>`
+//          `<h3>${person.content}:            ${person.postTime}   </h3>`
         
         
         
-        }) 
+//         }) 
         
-        resultsSection.innerHTML = html;
-    };
+//         resultsSection.innerHTML = html;
+//     };
 
      
 
