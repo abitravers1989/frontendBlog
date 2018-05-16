@@ -4,31 +4,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, inital-scale=1">
-
-  <title>Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+  <title>Abi Travers Blog</title>
   
-
-  <link rel="stylesheet" type="text/css" href= "bus.css"> 
-
 
   <style>
-  
+
+    :root {
+        --lightgrey: #F7F7F7;
+        --darkblue: #00151C;
+        --blue: #002C4C;
+        --midblue: #17A6D6;
+        --lighblue: #17A6D6;
+    }
+
+    body {
+        font-size: 1rem;
+        min-height: 100vh;
+        align-items: center; 
+        background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);    
+    }
+
+    .blogTitle{
+        color: white;
+        margin: 2%;
+        font-family: 'Gaegu', cursive;
+        font-size: 80px;
+        padding: 10%;
+        /* margin: 25%; */
+        word-spacing: -5px;;
+        line-height: 0.9;
+    }
+
+     .cloud{    
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            position: absolute;
+            left: -250px;
+            box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
+            /* z-index: -9; */
+            animation: move 5s infinite;
+         }
+
+    @keyframes move{
+      from {top: 0px;}
+      to {top: 90%;}
+    }
+
+    @keyframes moveSideways{
+        from {left: 0px;}
+        to {left: 96%;}
+      }
+
+      .cloud2{     
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        position: absolute;
+        left: -250px;
+        box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
+        /* z-index: -9; */   
+      }
+
+      .cloud3{     
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        position: absolute;
+        left: 0%;
+        box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
+        /* z-index: -9; */
+        animation: moveSideways 5s infinite;
+      }
+    
   </style>
 
 </head>
 
 <body>
-        <div class="parent">
-                <div class="icon"></div>
-                <div class="windows"></div>
-                <div class="driver"></div>
-                <div class="headlight"></div>
-                <div class="taillights"></div>
-                <div class="clouds"></div>
-                <div class="moreclouds"></div>
-                <div class="shadow"></div>
-              </div>
 
+    <div class="blogTitle">
+        <h1>Learnings by Abi</h1>
+    </div>
+
+     <div class="cloudwrapper">
+         <div class="cloud"></div>
+        <div class="cloud2 wrapper"></div>
+        <div class="cloud3 wrapper"></div>        
+     </div>
 
 </body>
 
