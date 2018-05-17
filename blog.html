@@ -8,50 +8,74 @@
   <title>Abi Travers Blog</title>  
   <!-- link is a link to an external resource. -->
   <link rel="stylesheet" href="reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="blog.css">
   
 </head>
 <style>
+
+    :root {
+    --lightgrey: #F7F7F7;
+    --darkblue: #00151C;
+    --blue: #002C4C;
+    --midblue: #17A6D6;
+    --lighblue: #17A6D6;
+    }
+
+    .top-padding{
+        display: grid;
+        height: 20px;
+    }
 
     nav{
         background-color: white;
         height: 70px;
     }
     .navigation{
-
         /* background-color: white; */
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         list-style: none;
-        grid-auto-rows: minmax(70px, auto);    
-           
+        grid-auto-rows: minmax(70px, auto);             
     }
 
     .navigation > li {
         display: grid;
         align-self: center;
-        justify-self: center;
+        /* justify-self: center; */
+       
+        font-family: 'Montserrat', sans-serif;
+        font-style: italic;
+        font-weight: 1000;
+        font-size: 2rem;
+        text-decoration: none;
+        margin-left: 8px;
+        /* justify-content: left 70px; */
+        
     }
 
+    .nav-link{
+        text-decoration: none;
+        color: var(--darkblue);
+    }
 
-
-  
 </style>
 
 <body>
+    <div class="top-padding"></div>
     <nav>
         <!-- ID should be unique something you will only have one of
         classes are the things that you should use to identify elements.
         non-unquie ids may throw errors  -->
         <ul class="navigation">
             <li>
-                <a href="index.html"> Home </a>
+                <a class="nav-link" href="index.html"> Home </a>
             </li>
             <li>
-                <a href="/game/game.html"> Game </a>
+                <a class="nav-link" href="/game/game.html"> Game </a>
             </li>
             <li>
-                <a href="/game/game.html"> Game </a>
+                <a class="nav-link" href="/game/game.html"> Game </a>
             </li>
         </ul>
     </nav>
