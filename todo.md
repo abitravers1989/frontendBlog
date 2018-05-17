@@ -1,4 +1,16 @@
 
+
+use css grid to set out the page
+make the nav bar 
+animate the heading - like pixels thing 
+
+make mustash move. 
+
+
+
+
+
+
 make responsive to size of window
 
 

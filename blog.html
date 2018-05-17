@@ -5,84 +5,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, inital-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
-  <title>Abi Travers Blog</title>
+  <title>Abi Travers Blog</title>  
+  <!-- link is a link to an external resource. -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="blog.css">
   
-
-  <style>
-
-    :root {
-        --lightgrey: #F7F7F7;
-        --darkblue: #00151C;
-        --blue: #002C4C;
-        --midblue: #17A6D6;
-        --lighblue: #17A6D6;
-    }
-
-    body {
-        font-size: 1rem;
-        min-height: 100vh;
-        align-items: center; 
-        background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);    
-    }
-
-    .blogTitle{
-        color: white;
-        margin: 2%;
-        font-family: 'Gaegu', cursive;
-        font-size: 80px;
-        padding: 10%;
-        /* margin: 25%; */
-        word-spacing: -5px;;
-        line-height: 0.9;
-    }
-
-     .cloud{    
-            height: 50px;
-            width: 50px;
-            border-radius: 50px;
-            position: absolute;
-            left: -250px;
-            box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-            /* z-index: -9; */
-            animation: move 5s infinite;
-         }
-
-    @keyframes move{
-      from {top: 0px;}
-      to {top: 90%;}
-    }
-
-    @keyframes moveSideways{
-        from {left: 0px;}
-        to {left: 96%;}
-      }
-
-      .cloud2{     
-        height: 50px;
-        width: 50px;
-        border-radius: 50px;
-        position: absolute;
-        left: -250px;
-        box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-        /* z-index: -9; */   
-      }
-
-      .cloud3{     
-        height: 50px;
-        width: 50px;
-        border-radius: 50px;
-        position: absolute;
-        left: 0%;
-        box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-        /* z-index: -9; */
-        animation: moveSideways 5s infinite;
-      }
-    
-  </style>
-
 </head>
+<style>
+
+    nav{
+        background-color: white;
+        height: 70px;
+    }
+    .navigation{
+
+        /* background-color: white; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;
+        grid-auto-rows: minmax(70px, auto);    
+           
+    }
+
+    .navigation > li {
+        display: grid;
+        align-self: center;
+        justify-self: center;
+    }
+
+
+
+  
+</style>
 
 <body>
+    <nav>
+        <!-- ID should be unique something you will only have one of
+        classes are the things that you should use to identify elements.
+        non-unquie ids may throw errors  -->
+        <ul class="navigation">
+            <li>
+                <a href="index.html"> Home </a>
+            </li>
+            <li>
+                <a href="/game/game.html"> Game </a>
+            </li>
+            <li>
+                <a href="/game/game.html"> Game </a>
+            </li>
+        </ul>
+    </nav>
 
     <div class="blogTitle">
         <h1>Learnings by Abi</h1>
