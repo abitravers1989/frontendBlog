@@ -62,6 +62,8 @@
 </style>
 
 <body>
+
+
     <div class="top-padding"></div>
     <nav>
         <!-- ID should be unique something you will only have one of
@@ -89,6 +91,46 @@
         <div class="cloud2 wrapper"></div>
         <div class="cloud3 wrapper"></div>        
      </div>
+
+
+     <script>
+            var cloud;
+            var distanceXAxis = Math.random()*600;
+            var distanceYAxis = Math.random()*600;
+            var x = 0, y =0;
+    
+            function init(){
+                cloud = document.querySelector('.cloud2');
+                console.log("working?")
+                console.log(cloud)
+                moveIt();
+            }
+    
+            window.requestAnimFrame = (function(){
+                return window.requestAnimationFrame  ||
+                       window.webkitRequestAnimationFrame ||
+                       window.mozRequestAnimationFrame ||
+                       window.oRequestAnimationFrame ||
+                       window.msRequestAnimationFrame ||
+                       function(/*function*/ callback, element){
+                           window.setTimeout(callback, 1000/60);
+                       };
+            })();
+    
+            function moveIt(){
+                x +=(distanceXAxis - x) * 0.15;
+                y +=(distanceYAxis - y) * 0.15;
+                cloud.style.left = x + "px";
+                cloud.style.top = y + "px";
+                if(Math.abs(x-distanceXAxis) < 1){
+                    distanceXAxis = Math.random()*600;
+                    distanceYAxis = Math.random()*600;
+                }
+                requestAnimFrame(moveIt, cloud);
+            }
+    
+            init();
+        </script>
 
 </body>
 
