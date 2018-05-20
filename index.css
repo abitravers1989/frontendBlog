@@ -42,14 +42,14 @@
 
         }
         
-        body {
-                
-             font-size: 1rem;
-            min-height: 100vh;
-                align-items: center; 
-                background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+              body {
+                      
+                  font-size: 1rem;
+                  min-height: 100vh;
+                      align-items: center; 
+                      background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
 
-              }
+                    }
 
               #results {
                 margin: 5%;

@@ -92,11 +92,19 @@
         <div class="cloud3 wrapper"></div>        
      </div>
 
+     <script>
+                var hrefString = "/assets/responsive2015/sass/styles.css";
+                var link = document.createElement("link");
+                link.href = hrefString;
+                link.rel = "stylesheet";
+                document.getElementsByTagName("body")[0].appendChild(link);
+        
+    </script>
 
      <script>
             var cloud;
-            var distanceXAxis = Math.random()*600;
-            var distanceYAxis = Math.random()*600;
+            var distanceXAxis = Math.random()*860;
+            var distanceYAxis = Math.random()*860;
             var x = 0, y =0;
     
             function init(){
@@ -104,6 +112,8 @@
                 console.log("working?")
                 console.log(cloud)
                 moveIt();
+                displayViewPort();
+                //requestAnimFrame(moveIt, cloud);
             }
     
             window.requestAnimFrame = (function(){
@@ -116,17 +126,26 @@
                            window.setTimeout(callback, 1000/60);
                        };
             })();
-    
             function moveIt(){
                 x +=(distanceXAxis - x) * 0.15;
                 y +=(distanceYAxis - y) * 0.15;
                 cloud.style.left = x + "px";
                 cloud.style.top = y + "px";
-                if(Math.abs(x-distanceXAxis) < 1){
-                    distanceXAxis = Math.random()*600;
-                    distanceYAxis = Math.random()*600;
-                }
+                // if(Math.abs(x-distanceXAxis) < 1){
+                //     distanceXAxis = Math.random()*600;
+                //     distanceYAxis = Math.random()*600;
+                // }
                 requestAnimFrame(moveIt, cloud);
+            }
+
+            function getViewportSize(){
+                viewportWidth = window.innerWidth
+                viewportHeight = window.innerHeight
+            }
+
+            function displayViewPort(){
+                console.log(viewportWidth)
+                console.log(viewportHeight)
             }
     
             init();
