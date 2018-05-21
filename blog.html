@@ -103,17 +103,15 @@
 
      <script>
             var cloud;
-            var distanceXAxis = Math.random()*860;
-            var distanceYAxis = Math.random()*860;
-            var x = 0, y =0;
+            
     
             function init(){
                 cloud = document.querySelector('.cloud2');
-                console.log("working?")
-                console.log(cloud)
-                moveIt();
+                
+                //moveIt();
                 //getViewportSize();
                 //displayViewPort();
+                movePlease()
             }
     
             window.requestAnimFrame = (function(){
@@ -127,26 +125,64 @@
                        };
             })();
 
-            function changeDistance(){
+            function getViewportSize(){
+                viewportWidth = window.innerWidth
+                viewportHeight = window.innerHeight
+            }
+
+            function movePlease(){
+                var x = 0
+                var y =0
+                getViewportSize()
+                changeX()
+                changeY()
+                requestAnimFrame(movePlease, cloud);
+            }
+
+            function changeX(){
+                for (x = 0; x < viewportWidth; x ++) {
+                    cloud.style.left = x + "px";
+                    
+                    console.log("hit")
+                }
+            }
+
+            function changeY(){
+                for (y = 0; y < viewportHeight; y ++) {
+                    cloud.style.top = y + "px";
+                  
+                    console.log("hit")
+                }
+            }
+
+
+
+            function changeDistance(distanceXAxis, distanceYAxis){
+                x += (distanceXAxis -x)
+                y += (distanceYAxis -y)
+                cloud.style.left = x + "px";
+                cloud.style.top = y + "px";
 
             }
 
             function moveIt(){
                // x +=(distanceXAxis - x) * 0.15;
-                x += (distanceXAxis -x)
-                y +=distanceYAxis 
-                cloud.style.left = x + "px";
-                cloud.style.top = y + "px";
+                var distanceXAxis = Math.random()*860;
+                var distanceYAxis = Math.random()*860;
+                changeDistance(distanceXAxis, distanceYAxis)
                 console.log(cloud.style.left)
                 console.log(cloud.style.top)
                 getViewportSize();
+
+                while (cloud.style.left < viewportWidth)
+                {
+                    distanceXAxis += Math.random()*60;
+                    distanceYAxis = Math.random()*60;
+                    changeDistance(distanceXAxis, distanceYAxis);
+                }
                // requestAnimFrame(moveIt, cloud);
             }
 
-            function getViewportSize(){
-                viewportWidth = window.innerWidth
-                viewportHeight = window.innerHeight
-            }
 
             function displayViewPort(){
                 //getViewportSize();
