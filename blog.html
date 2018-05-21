@@ -112,8 +112,8 @@
                 console.log("working?")
                 console.log(cloud)
                 moveIt();
-                displayViewPort();
-                //requestAnimFrame(moveIt, cloud);
+                //getViewportSize();
+                //displayViewPort();
             }
     
             window.requestAnimFrame = (function(){
@@ -126,16 +126,21 @@
                            window.setTimeout(callback, 1000/60);
                        };
             })();
+
+            function changeDistance(){
+
+            }
+
             function moveIt(){
-                x +=(distanceXAxis - x) * 0.15;
-                y +=(distanceYAxis - y) * 0.15;
+               // x +=(distanceXAxis - x) * 0.15;
+                x += (distanceXAxis -x)
+                y +=distanceYAxis 
                 cloud.style.left = x + "px";
                 cloud.style.top = y + "px";
-                // if(Math.abs(x-distanceXAxis) < 1){
-                //     distanceXAxis = Math.random()*600;
-                //     distanceYAxis = Math.random()*600;
-                // }
-                requestAnimFrame(moveIt, cloud);
+                console.log(cloud.style.left)
+                console.log(cloud.style.top)
+                getViewportSize();
+               // requestAnimFrame(moveIt, cloud);
             }
 
             function getViewportSize(){
@@ -144,6 +149,7 @@
             }
 
             function displayViewPort(){
+                //getViewportSize();
                 console.log(viewportWidth)
                 console.log(viewportHeight)
             }
