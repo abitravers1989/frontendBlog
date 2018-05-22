@@ -59,6 +59,30 @@
         color: var(--darkblue);
     }
 
+    .box{
+        width: 80px;
+        height: 80px;
+        background-color: aqua;
+        transition: width 0.3s, height 0.3s;
+        /* transition-property: width;
+        transition-duration: 2s;
+        transition-property: height;
+        transition-duration: 2s; */
+        transition-timing-function: linear;
+    }
+
+    .box:hover{
+        width: 300px;
+        height: 300px;
+    }
+
+     .box2{
+        width: 80px;
+        height: 80px;
+        background-color:white;
+       
+    }
+
 </style>
 
 <body>
@@ -92,103 +116,38 @@
         <div class="cloud3 wrapper"></div>        
      </div>
 
-     <script>
-                var hrefString = "/assets/responsive2015/sass/styles.css";
-                var link = document.createElement("link");
-                link.href = hrefString;
-                link.rel = "stylesheet";
-                document.getElementsByTagName("body")[0].appendChild(link);
-        
-    </script>
+     <div class="box"> </div>
+
+     <div class="box2"> </div>
 
      <script>
             var cloud;
-            
-    
+               
             function init(){
                 cloud = document.querySelector('.cloud2');
-                
-                //moveIt();
-                //getViewportSize();
-                //displayViewPort();
-                movePlease()
-            }
-    
-            window.requestAnimFrame = (function(){
-                return window.requestAnimationFrame  ||
-                       window.webkitRequestAnimationFrame ||
-                       window.mozRequestAnimationFrame ||
-                       window.oRequestAnimationFrame ||
-                       window.msRequestAnimationFrame ||
-                       function(/*function*/ callback, element){
-                           window.setTimeout(callback, 1000/60);
-                       };
-            })();
-
-            function getViewportSize(){
-                viewportWidth = window.innerWidth
-                viewportHeight = window.innerHeight
+                // movePlease()
+                getCloudPosition();
+                changeColor();
             }
 
-            function movePlease(){
-                var x = 0
-                var y =0
-                getViewportSize()
-                changeX()
-                changeY()
-                requestAnimFrame(movePlease, cloud);
+//https://developer.mozilla.org/en-US/docs/Web/Events/mouseover
+            function changeColor(){
+                box2 = document.querySelector('.box2');
+                box2.addEventListener("mouseover", function (event){
+                    event.target.style.color = "black";
+
+                    setTimeout(function(){
+                        event.target.style.color = "";
+                    }, 500)
+                }, flase)
             }
 
-            function changeX(){
-                for (x = 0; x < viewportWidth; x ++) {
-                    cloud.style.left = x + "px";
-                    
-                    console.log("hit")
-                }
-            }
+            // function getCloudPosition(){
 
-            function changeY(){
-                for (y = 0; y < viewportHeight; y ++) {
-                    cloud.style.top = y + "px";
-                  
-                    console.log("hit")
-                }
-            }
-
-
-
-            function changeDistance(distanceXAxis, distanceYAxis){
-                x += (distanceXAxis -x)
-                y += (distanceYAxis -y)
-                cloud.style.left = x + "px";
-                cloud.style.top = y + "px";
-
-            }
-
-            function moveIt(){
-               // x +=(distanceXAxis - x) * 0.15;
-                var distanceXAxis = Math.random()*860;
-                var distanceYAxis = Math.random()*860;
-                changeDistance(distanceXAxis, distanceYAxis)
-                console.log(cloud.style.left)
-                console.log(cloud.style.top)
-                getViewportSize();
-
-                while (cloud.style.left < viewportWidth)
-                {
-                    distanceXAxis += Math.random()*60;
-                    distanceYAxis = Math.random()*60;
-                    changeDistance(distanceXAxis, distanceYAxis);
-                }
-               // requestAnimFrame(moveIt, cloud);
-            }
-
-
-            function displayViewPort(){
-                //getViewportSize();
-                console.log(viewportWidth)
-                console.log(viewportHeight)
-            }
+            //     console.log("cloud.style.left")
+            //     console.log(cloud.style.left)
+            //     console.log(cloud.style.top)
+            // }
     
             init();
         </script>

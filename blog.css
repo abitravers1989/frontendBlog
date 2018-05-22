@@ -22,6 +22,16 @@ body {
     /* margin: 25%; */
     word-spacing: -5px;;
     line-height: 0.9;
+    -webkit-transition: color 2s, font-size 2s;
+    -moz-transition: color 2s, font-size 2s;
+      -o-transition: color 2s, font-size 2s;
+         transition: color 2s, font-size 2s;
+}
+
+
+.box:hover{
+    font-size: 100px;
+    color: #fc0;
 }
 
 @keyframes move{

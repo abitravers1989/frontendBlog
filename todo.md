@@ -6,7 +6,8 @@ animate the heading - like pixels thing
 
 make mustash move. 
 
-
+http://www.madwell.com/brief/
+http://pixelsbypip.com/#lbw
 
 
 
