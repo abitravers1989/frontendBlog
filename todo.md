@@ -1,10 +1,16 @@
 
 
 use css grid to set out the page
-make the nav bar 
-animate the heading - like pixels thing 
+make the nav bar - DONE 
+animate the heading - DONE 
 
-make mustash move. 
+
+Make box with show blog posts display the blogPosts - then make it change to take up more slots on css grid instead of manual.
+Dynamically get the size of the viewport with JS. 
+Make footer. 
+Create layout of page for individual blog posts. 
+
+
 
 http://www.madwell.com/brief/
 http://pixelsbypip.com/#lbw

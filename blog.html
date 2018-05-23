@@ -83,10 +83,14 @@
        
     }
 
+/* here make it fill a few more grib columns .. change the space it occupies  */
     .boxChange {
         background-color: black; 
         margin: 4%;
         padding: 10%;
+        width: 90%;
+        height: 600px;
+        color: white;
     /* margin: 25%; */
     }
 
@@ -125,7 +129,7 @@
 
      <div class="box"> </div>
 
-     <div class="box2"> </div>
+     <div class="box2"> Show Blogs </div>
 
      <script>
             var cloud;
@@ -141,53 +145,12 @@
          blogTitle = document.querySelector('.blogTitle');
          blogTitle.addEventListener("mouseover", changeColor)}
 
+
+// when added to the event listener it changes the box2's color and size 
          function changeColor(eventObject){
            box2 = document.querySelector('.box2');
             box2.classList.add('boxChange');
 
-
-
-
-
-
-
-
-                
-                // xCordinates = eventObject.clientXl;
-                // yCordinates = eventObject.clientY
-                //     alert(
-                //  "co-ordinates of mouse clientX value: " + eventObject.clientX + "\n" +
-                //  "co-ordinates of mouse clientY value: " + eventObject.clientY + "\n"
-                // );
-            }
-
-
-//https://developer.mozilla.org/en-US/docs/Web/Events/mouseover
-            // function changeColorClicked(){
-            //     box2 = document.querySelector('.box2');
-            //     box2.addEventListener("mouseover", changeColor)}
-
-            // function changeColor(){
-
-            // }
-                
-                
-            //     function (event){
-            //         event.target.style.color = "black";
-
-            //         setTimeout(function(){
-            //             event.target.style.color = "";
-            //         }, 500)
-            //     }, flase)
-            // }
-
-            // function getCloudPosition(){
-
-            //     console.log("cloud.style.left")
-            //     console.log(cloud.style.left)
-            //     console.log(cloud.style.top)
-            // }
-    
             init();
         </script>
 
