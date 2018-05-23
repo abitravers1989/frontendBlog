@@ -29,9 +29,9 @@ body {
 }
 
 
-.box:hover{
-    font-size: 100px;
-    color: #fc0;
+.blogTitle:hover{
+    font-size: 110px;
+    color: black;
 }
 
 @keyframes move{
