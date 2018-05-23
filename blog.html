@@ -83,15 +83,11 @@
        
     }
 
-    .playing {
-        color: black; 
+    .boxChange {
+        background-color: black; 
         margin: 4%;
-    
-    font-size: 120px;
-    padding: 10%;
+        padding: 10%;
     /* margin: 25%; */
-    word-spacing: -5px;;
-    line-height: 2;
     }
 
 </style>
@@ -136,18 +132,18 @@
                
             function init(){
                 //cloud = document.querySelector('.cloud2');
-               //addEventListener()
+               addEventListener()
             }
 
             
 
-    //   function addEventListener(){
-    //         blogTitle = document.querySelector('.blogTitle');
-    //         blogTitle.addEventListener("mouseover", changeColor)}
+       function addEventListener(){
+         blogTitle = document.querySelector('.blogTitle');
+         blogTitle.addEventListener("mouseover", changeColor)}
 
-    //      function changeColor(eventObject){
-    //             box2 = document.querySelector('.blogTitle');
-    //             box2.classList.add('playing');
+         function changeColor(eventObject){
+           box2 = document.querySelector('.box2');
+            box2.classList.add('boxChange');
 
 
 
