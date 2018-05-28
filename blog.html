@@ -129,29 +129,67 @@
 
      <div class="box"> </div>
 
-     <div class="box2"> Show Blogs </div>
+     <div class="box2"> Show Blogs 
+         <ul class="showResults">
+
+         </ul>
+     </div>
 
      <script>
-            var cloud;
                
-            function init(){
-                //cloud = document.querySelector('.cloud2');
-               addEventListener()
-            }
+        function init(){
+            addEventListener()
+            addEventListenerToPost()
+        }    
 
-            
-
-       function addEventListener(){
-         blogTitle = document.querySelector('.blogTitle');
-         blogTitle.addEventListener("mouseover", changeColor)}
-
+    function addEventListener(){
+      blogTitle = document.querySelector('.blogTitle');
+      blogTitle.addEventListener("mouseover", changeColor)
+    }
 
 // when added to the event listener it changes the box2's color and size 
-         function changeColor(eventObject){
-           box2 = document.querySelector('.box2');
-            box2.classList.add('boxChange');
+    function changeColor(eventObject){
+      box2 = document.querySelector('.box2');
+      box2.classList.add('boxChange')
+    }
 
-            init();
+    fetch('http://localhost:5000/posts')
+    .then(response => response.json())
+    .then(jsonResponse => listBlogs(jsonResponse))
+        .catch(function(error)
+        {
+            console.log(error)
+        });
+
+    function listBlogs(jsonData){
+        const resultsSection = document.querySelector('.showResults')
+        resultsSection.innerHTML = '';
+        let html = '';
+        jsonData.forEach(post => {
+            html+=
+            `<li class= "posts ${post.id}">${post.title}:  ${post.postTime}</li>`
+        });
+
+        resultsSection.innerHTML = html;
+    }
+
+    function addEventListenerToPost(){
+        console.log()
+        chosenPost = document.querySelector('.posts')
+        chosenPost.addEventListener("onclick", openPostPage)
+    }
+
+    function openPostPage(event){
+        console.log(event)
+    }
+
+            // <li>
+            //     <a class="nav-link" href="/game/game.html"> Game </a>
+            // </li>
+
+        init()
+
+
         </script>
 
 </body>

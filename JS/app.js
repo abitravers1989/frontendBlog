@@ -54,9 +54,8 @@ function showResults(jsonData){
         let html = '';
         jsonData.forEach(post => {
             html +=
-            console.log(post)
-         
-         `<h3>${post.content}:            ${post.postTime}   </h3>`
+          
+         `<h3>${post.content}:  ${post.postTime}   </h3>`
         
         });
        
