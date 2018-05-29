@@ -118,7 +118,7 @@
     </nav>
 
     <div class="blogTitle">
-        <h1>Learnings by Abi</h1>
+        <h1>Blog Title</h1>
     </div>
 
      <div class="cloudwrapper">
@@ -167,21 +167,16 @@
         let html = '';
         jsonData.forEach(post => {
             html+=
-            `<li class= "posts ${post.id}">${post.title}:  ${post.postTime}</li>`
+            `<li> 
+                <a href="http://localhost:5000/posts/${post.title}"> ${post.title}:  ${post.postTime} </a> 
+             </li>`
+           // http://localhost:5000/posts/${post.title}"
+          // <button id="buttonID' class= "posts ${post.id}" type="button"> Show Post </button>
         });
 
         resultsSection.innerHTML = html;
     }
 
-    function addEventListenerToPost(){
-        console.log()
-        chosenPost = document.querySelector('.posts')
-        chosenPost.addEventListener("onclick", openPostPage)
-    }
-
-    function openPostPage(event){
-        console.log(event)
-    }
 
             // <li>
             //     <a class="nav-link" href="/game/game.html"> Game </a>
