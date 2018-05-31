@@ -9,6 +9,18 @@ Make box with show blog posts display the blogPosts - then make it change to tak
 Dynamically get the size of the viewport with JS. 
 Make footer. 
 Create layout of page for individual blog posts. 
+/// intercept a certain 
+return post return html file xxx hmtl file defines which bit post to display and css and css 
+
+html.. http//hkgn
+
+
+Try
+put event listener on post links a tags .. anchor tags .. takes you somewhere else 
+when that thing is clicked populate part of the page with that html and post.content
+
+
+
 
 
 

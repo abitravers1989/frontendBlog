@@ -122,6 +122,8 @@
                 <h1>Blog Title</h1>
             </div>
 
+            <div class="postContent"> </div>
+
             <div class="cloudwrapper">
                 <div class="cloud"></div>
                 <div class="cloud2 wrapper"></div>
@@ -147,13 +149,55 @@
                
         function init(){
             addEventListener()
-            addEventListenerToPost()
+            
         }    
 
     function addEventListener(){
-      blogTitle = document.querySelector('.blogTitle');
-      blogTitle.addEventListener("mouseover", changeColor)
+      //blogTitle = document.querySelector('.blogTitle');
+      //blogTitle.addEventListener("mouseover", changeColor)
+      const showResults = document.querySelector('.showResults');
+      showResults.addEventListener("click", openPost)
     }
+
+    function openPost(event){
+        //console.log(event.target.attributes[0].value)
+        event.stopPropagation();
+        const postContentPlaceholder = document.querySelector('.postContent');
+        //give blog ID instead of blog title
+        const blogTitle = event.target.attributes[0].value
+       // postContentPlaceholder.innerText = getContent(blogTitle)
+        //refactor and give it ID 
+        let heading = document.createElement("h2")
+        heading.innerText = blogTitle
+
+        //const content = getContent(blogTitle)
+
+        postContentPlaceholder.appendChild(heading)
+        
+        let contentElement = document.createElement("p")
+
+        fetch(`http://localhost:5000/posts/${blogTitle}`)
+        .then(response => response.json())
+
+        //fetch returns a promise not a value 
+        .then(jsonResponse => { return jsonResponse.content })
+        .then (jsonResponse => contentElement.innerText = jsonResponse)
+  
+
+        console.log(contentElement)
+        
+        postContentPlaceholder.appendChild(contentElement)
+
+        
+    }
+
+    function getContent(blogTitle) {
+        fetch(`http://localhost:5000/posts/${blogTitle}`)
+        .then(response => response.json())
+
+        //fetch returns a promise not a value 
+        .then(jsonResponse => { return jsonResponse.content })
+    }  
 
 // when added to the event listener it changes the box2's color and size 
     function changeColor(eventObject){
@@ -176,7 +220,7 @@
         jsonData.forEach(post => {
             html+=
             `<li> 
-                <a href="http://localhost:5000/posts/${post.title}"> ${post.title}:  ${post.postTime} </a> 
+                <div data-href="${post.title}"> ${post.title}:  ${post.postTime} </div> 
              </li>`
            // http://localhost:5000/posts/${post.title}"
           // <button id="buttonID' class= "posts ${post.id}" type="button"> Show Post </button>
@@ -185,10 +229,6 @@
         resultsSection.innerHTML = html;
     }
 
-
-            // <li>
-            //     <a class="nav-link" href="/game/game.html"> Game </a>
-            // </li>
 
         init()
 
