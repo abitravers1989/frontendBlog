@@ -10,8 +10,69 @@ body {
     font-size: 1rem;
     min-height: 100vh;
     align-items: center; 
-    background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);    
+    background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);  
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;  
 }
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    display: block;
+}
+
+
+#page-container {
+    opacity: 1;
+    height: 100%;
+    position: relative;
+    right: 0;
+    transition: all .7s,right .5s;
+    -webkit-transition: all .7s,right .5s;
+    -moz-transition: .7s all,.5s right;
+    -o-transition: .7s all,.5s right;
+}
+
+container :after, :before {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+container ::before {
+    box-sizing: border-box;
+    outline: 0;
+    display: table;
+    content: " ";
+    box-sizing: border-box;
+    outline: 0;
+}
+
+container ::after {
+    box-sizing: border-box;
+    outline: 0;
+    display: table;
+    content: " ";
+}
+
 
 .blogTitle{
     color: white;
