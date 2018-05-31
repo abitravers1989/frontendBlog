@@ -148,9 +148,10 @@
      <script>
                
         function init(){
-            addEventListener()
+            addEventListener2()
             
-        }    
+        }  
+
 
     function addEventListener(){
       //blogTitle = document.querySelector('.blogTitle');
@@ -167,7 +168,7 @@
         const blogTitle = event.target.attributes[0].value
        // postContentPlaceholder.innerText = getContent(blogTitle)
         //refactor and give it ID 
-        let heading = document.createElement("h2")
+        const heading = document.createElement("h2")
         heading.innerText = blogTitle
 
         //const content = getContent(blogTitle)
@@ -182,22 +183,21 @@
         //fetch returns a promise not a value 
         .then(jsonResponse => { return jsonResponse.content })
         .then (jsonResponse => contentElement.innerText = jsonResponse)
-  
 
-        console.log(contentElement)
-        
         postContentPlaceholder.appendChild(contentElement)
 
         
     }
 
-    function getContent(blogTitle) {
-        fetch(`http://localhost:5000/posts/${blogTitle}`)
-        .then(response => response.json())
+    
 
-        //fetch returns a promise not a value 
-        .then(jsonResponse => { return jsonResponse.content })
-    }  
+    // function getContent(blogTitle) {
+    //     fetch(`http://localhost:5000/posts/${blogTitle}`)
+    //     .then(response => response.json())
+
+    //     //fetch returns a promise not a value 
+    //     .then(jsonResponse => { return jsonResponse.content })
+    // }  
 
 // when added to the event listener it changes the box2's color and size 
     function changeColor(eventObject){
@@ -227,6 +227,17 @@
         });
 
         resultsSection.innerHTML = html;
+    }
+
+      function addEventListener2(){
+      //blogTitle = document.querySelector('.blogTitle');
+      //blogTitle.addEventListener("mouseover", changeColor)
+      const showResults = document.querySelector('.showResults');
+      showResults.addEventListener("click", goToNewPage)
+    }
+
+    function goToNewPage(){
+        window.location.href = "post.html"
     }
 
 
