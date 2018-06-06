@@ -107,11 +107,63 @@
 
   function getURLParams(url){
     var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
-    console.log(queryString);
+    return queryString;
     //grab the query from the url to start displaying the content but need to remove the %20 from it
-  }
-    var url = window.location.href;
-    getURLParams(url)
+    }
+
+   url = window.location.href;
+   urlParams = getURLParams(url); 
+   console.log('url' + urlParams);
+  replaced = urlParams.replace(/%20/g, " ");
+
+
+   fetch('http://localhost:5000/posts')
+   
+     .then(function(response){
+      return response.json()
+     })
+     .then(function(previousPromiseResolved){
+       console.log(previousPromiseResolved)
+       const resultsSection = document.querySelector('.blog-content')
+       resultsSection.innerHTML = '';
+       let html = '';
+       previousPromiseResolved.forEach(post =>{
+         console.log(post.title)
+         console.log(replaced)
+        //  if (post.title == urlParams){
+        //   html+=
+        //   `<li> 
+        //        <div data-href="${post.title}"> ${post.title}:  ${post.postTime} </div> 
+        //      </li>`
+        //  }
+       })
+       resultsSection.innerHTML = html;
+     })
+     .catch(function(err){
+       console.log('Catch', err);
+     })
+     
+   function blogContent(jsonResponse) {
+
+  const resultsSection = document.querySelector('.blog-content')
+         resultsSection.innerHTML = '';
+         let html = '';
+         jsonData.forEach(post => {
+           console.log(post)
+          //if (post.Title == ulParams){
+           html+=
+          `<li> 
+               <div data-href="${post.title}"> ${post.title}:  ${post.postTime} </div> 
+             </li>`
+         })
+       resultsSection.innerHTML = html;
+         }
+         
+
+    
+  
+
+   
   </script>
 
 </html>
