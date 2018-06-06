@@ -149,7 +149,7 @@
                
         function init(){
             addEventListener2()
-            
+           // addEventListener()
         }  
 
 
@@ -185,19 +185,8 @@
         .then (jsonResponse => contentElement.innerText = jsonResponse)
 
         postContentPlaceholder.appendChild(contentElement)
-
         
     }
-
-    
-
-    // function getContent(blogTitle) {
-    //     fetch(`http://localhost:5000/posts/${blogTitle}`)
-    //     .then(response => response.json())
-
-    //     //fetch returns a promise not a value 
-    //     .then(jsonResponse => { return jsonResponse.content })
-    // }  
 
 // when added to the event listener it changes the box2's color and size 
     function changeColor(eventObject){
@@ -236,10 +225,13 @@
       showResults.addEventListener("click", goToNewPage)
     }
 
-    function goToNewPage(){
-        window.location.href = "template.html"
+    function goToNewPage(e){
+        console.log(e)
+        event.stopPropagation();
+        const blogTitle = event.target.attributes[0].value
+        console.log(blogTitle)
+        window.location.href = `template.html/?${blogTitle}`
     }
-
 
         init()
 
