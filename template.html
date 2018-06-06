@@ -111,10 +111,10 @@
     //grab the query from the url to start displaying the content but need to remove the %20 from it
     }
 
-   url = window.location.href;
-   urlParams = getURLParams(url); 
-   console.log('url' + urlParams);
-  replaced = urlParams.replace(/%20/g, " ");
+  var url = window.location.href;
+  var urlParams = getURLParams(url); 
+   //console.log('url' + urlParams);
+   var replaced = urlParams.replace(/%20/g, " ");
 
 
    fetch('http://localhost:5000/posts')
@@ -123,42 +123,28 @@
       return response.json()
      })
      .then(function(previousPromiseResolved){
-       console.log(previousPromiseResolved)
+       //console.log(previousPromiseResolved)
        const resultsSection = document.querySelector('.blog-content')
        resultsSection.innerHTML = '';
        let html = '';
        previousPromiseResolved.forEach(post =>{
-         console.log(post.title)
-         console.log(replaced)
-        //  if (post.title == urlParams){
-        //   html+=
-        //   `<li> 
-        //        <div data-href="${post.title}"> ${post.title}:  ${post.postTime} </div> 
-        //      </li>`
-        //  }
+        // console.log(post.title)
+         //console.log(replaced)
+          if (post.title == replaced){
+            html+=
+           `<h1> ${post.title} </h1>
+           <li> 
+                <div data-href="list-content ${post.title}"> ${post.content} </div> 
+              </li>`
+              //console.log("html" + html)
+          }
        })
        resultsSection.innerHTML = html;
      })
      .catch(function(err){
        console.log('Catch', err);
      })
-     
-   function blogContent(jsonResponse) {
-
-  const resultsSection = document.querySelector('.blog-content')
-         resultsSection.innerHTML = '';
-         let html = '';
-         jsonData.forEach(post => {
-           console.log(post)
-          //if (post.Title == ulParams){
-           html+=
-          `<li> 
-               <div data-href="${post.title}"> ${post.title}:  ${post.postTime} </div> 
-             </li>`
-         })
-       resultsSection.innerHTML = html;
-         }
-         
+    
 
     
   
