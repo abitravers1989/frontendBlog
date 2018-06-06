@@ -230,6 +230,8 @@
         event.stopPropagation();
         const blogTitle = event.target.attributes[0].value
         console.log(blogTitle)
+
+        //need to remove the %20 from it 
         window.location.href = `template.html/?${blogTitle}`
     }
 
