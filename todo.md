@@ -1,5 +1,35 @@
 
 
+formatting on the blog posts.
+POST 
+Update PUT
+DELTE 
+functionality
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 use css grid to set out the page
 make the nav bar - DONE 
 animate the heading - DONE 
