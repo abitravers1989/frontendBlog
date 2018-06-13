@@ -3,13 +3,8 @@
 <html ⚡>
 <head>
   <meta charset="utf-8">
-  <title>amp-fx-collection</title>
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <!-- #### Setup -->
-  <!--
-    Import the `amp-fx-collection` extension in the header.
-  -->
-  <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+  <title>Abis Blog</title>
+  <link rel="icon" href="https://antoni.de/wp-content/themes/antoni/favicon.png">
   
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="stylesheet" href="reset.css">
@@ -33,6 +28,7 @@
       font-weight:400;
       line-height:1.8em;
       color:#666;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
         :root {
@@ -45,6 +41,7 @@
         
   .body{
     background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+
   }
 
     .header {
@@ -68,17 +65,6 @@
       color: white;
     }
 
-    .parallax-image-window {
-      overflow: hidden;
-    }
-
-    .parallax-image-window amp-img {
-      margin-bottom: -5vh;
-    }
-    .first-image{
-        width: 100vw;
-        height: 100vh;
-    }
 
 
 
@@ -130,6 +116,16 @@
   font-size:34px;
   letter-spacing:8px;
   text-transform:uppercase;
+  z-index: 10;
+    /* color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-family: "antoni-web","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 180px;
+    font-size: 7vw;
+    letter-spacing: -0.02em;
+    position: relative;
+    vertical-align: middle */
   
 }
 
@@ -145,12 +141,26 @@
 }
 
 .blog-content{
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .li{
   display: none;
   
+}
+
+.movable-div{
+  z-index: 10;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-family: "antoni-web","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 180px;
+    font-size: 11vw;
+    letter-spacing: -0.02em;
+    position: relative;
+    vertical-align: middle
 }
 
 @media(max-width:568px){
@@ -166,14 +176,18 @@
 
 
 
-
+<div class="wrapper">
   <div class="pimg1">
-      <div class="ptext">
-        
-            <span class="border title"></span>
-       
-      </div>
+    <div class="ptext">
+      
+          <span class="border title"></span>
+          <div class ="movable-div">Moving div</div>
+     
     </div>
+  </div>
+
+</div>
+
   
     <section class="section section-dark">
 
@@ -202,18 +216,43 @@
     <div class="pimg3">
       <div class="ptext">
        <!-- href wont work here .. need js to change url as href just appends it to end -->
-            <a class="border trans" href="#../blog">Go Back to Home Page</a>
+            <a class="border trans homePageLink" >Go Back to Home Page</a>
         
       
       </div>
+
+      
     </div>
   
  
-  
-    
 
 </body>
 <script>
+
+
+
+  function moveDiv(){
+    var movableDiv = document.querySelector('.movable-div');
+
+    var movableDivbottom = movableDiv.getBoundingClientRect().bottom;
+    var movableDivHeight = movableDiv.offsetHeight;
+    
+   
+    
+    var surroundingDiv = document.querySelector('.wrapper');
+    var topOfDiv = surroundingDiv.getBoundingClientRect().top;
+    var bottomOfDiv = surroundingDiv.getBoundingClientRect().bottom;
+
+     var top = Math.max(0, topOfDiv);
+     console.log(top);
+
+    
+      movableDiv.style.top = top.toString() + "px";
+     
+     console.log( movableDiv.style.top)
+  }
+
+   window.onscroll = moveDiv()
 
   function getURLParams(url){
     var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
@@ -265,7 +304,7 @@
      })
     
 
-    
+     moveDiv()
   
 
    

@@ -1,10 +1,17 @@
 
 
 formatting on the blog posts.
-POST 
+
+fix go back to home page 
+refactor code 
+
+own version of paralax 
+POST  - include a html editor 
+
+
 Update PUT
 DELTE 
-functionality
+search functionality
 
 
 
