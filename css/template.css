@@ -1,0 +1,51 @@
+
+
+:root {
+--lightgrey: #F7F7F7;
+--darkblue: #00151C;
+--blue: #002C4C;
+--midblue: #17A6D6;
+--lighblue: #17A6D6;
+}
+
+.body{
+background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+}
+
+.header {
+position: relative;
+overflow: hidden;
+height: 100vh;
+}
+
+.header h1 {
+color: white;
+bottom: 10%;
+left: 10px;
+position: absolute;
+z-index: 1;
+
+font-size: 2.9em;
+}
+
+.title {
+background-color: black;
+color: white;
+}
+
+.parallax-image-window {
+overflow: hidden;
+}
+
+.parallax-image-window amp-img {
+margin-bottom: -5vh;
+}
+.first-image{
+width: 100vw;
+height: 100vh;
+}
+
+
+.content-area{      
+height: 100vh;
+}

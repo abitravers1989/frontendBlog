@@ -230,29 +230,36 @@
 <script>
 
 
+var homePageLink = document.querySelector('.homePageLink');
+
+homePageLink.addEventListener('click', function(e){
+  window.location.replace("http://localhost:8080/blog");
+})  
+
 
   function moveDiv(){
     var movableDiv = document.querySelector('.movable-div');
 
     var movableDivbottom = movableDiv.getBoundingClientRect().bottom;
     var movableDivHeight = movableDiv.offsetHeight;
-    
-   
-    
+     
     var surroundingDiv = document.querySelector('.wrapper');
     var topOfDiv = surroundingDiv.getBoundingClientRect().top;
+    console.log(topOfDiv);
     var bottomOfDiv = surroundingDiv.getBoundingClientRect().bottom;
+    console.log(bottomOfDiv);
 
-     var top = Math.max(0, topOfDiv);
-     console.log(top);
-
-    
-      movableDiv.style.top = top.toString() + "px";
+    window.addEventListener('scroll', function(e){
+      movableDiv.style.bottom = bottomOfDiv;
+      movableDiv.position = "absolute";
+    })
      
-     console.log( movableDiv.style.top)
+     // movableDiv.style.top = top.toString() + "px";
+     
+  
   }
 
-   window.onscroll = moveDiv()
+  
 
   function getURLParams(url){
     var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
@@ -275,6 +282,8 @@
 
 
    fetch(`http://localhost:5000/posts/${replaced}`)
+
+   console.log(replaced)
    
      .then(function(response){
       return response.json()
@@ -304,8 +313,7 @@
      })
     
 
-     moveDiv()
-  
+    
 
    
   </script>

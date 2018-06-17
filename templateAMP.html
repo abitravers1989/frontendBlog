@@ -1,0 +1,276 @@
+
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <title>Blog Post</title>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <!-- #### Setup -->
+  <!--
+    Import the `amp-fx-collection` extension in the header.
+  -->
+  <!-- <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script> -->
+  <link rel="canonical" href="https://ampbyexample.com/components/amp-fx-collection/">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <!-- <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <!-- -->
+
+  <style amp-custom>
+
+    .html{
+      height:100%;
+      margin:0;
+      font-size:16px;
+      font-family:"Lato", sans-serif;
+      font-weight:400;
+      line-height:1.8em;
+      color:#666;
+    }
+
+        :root {
+        --lightgrey: #F7F7F7;
+        --darkblue: #00151C;
+        --blue: #002C4C;
+        --midblue: #17A6D6;
+        --lighblue: #17A6D6;
+        }
+        
+  .body{
+    background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+  }
+
+    .header {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .header h1 {
+      color: white;
+      bottom: 10%;
+      left: 10px;
+      position: absolute;
+      z-index: 1;  
+      font-size: 2.9em;
+    }
+
+    .title {
+      background-color: black;
+      color: white;
+    }
+
+    .parallax-image-window {
+      overflow: hidden;
+    }
+
+    .parallax-image-window amp-img {
+      margin-bottom: -5vh;
+    }
+    .first-image{
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+    .content-area{      
+        /* height: 100vh; */
+        background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+    }
+
+    .pimg1, .pimg2, .pimg3{
+  position:relative;
+  opacity:0.70;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+.pimg1{
+  background-image:url('../img/image3.jpg');
+  min-height:100vh;
+}
+
+.pimg2{
+  background-image:url('../img/image2.jpg');
+  min-height:400px;
+}
+
+.pimg3{
+  background-image:url('../img/image3.jpg');
+  min-height:400px;
+}
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light{
+  background-color:#f4f4f4;
+  color:#666;
+}
+
+.section-dark{
+  background-color:#282e34;
+  color:#ddd;
+}
+
+.ptext{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.ptext .border{
+  background-color:#111;
+  color:#fff;
+  padding:20px;
+}
+
+.ptext .border.trans{
+  background-color:transparent;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+  }
+}
+    
+  </style>
+</head>
+<body>
+  <!-- ## Parallax -->
+  <!--
+    The parallax effect allows an element to move as if it is nearer or farther
+    relative to the foreground of the page content. As the user scrolls the page,
+    the element scrolls faster or slower depending on the value assigned to
+    the `data-parallax-factor` attribute.
+
+    Parallax effect can be added to any element by adding `amp-fx="parallax"`
+    attribute and the intensity of the effect can be controlled via `data-parallax-factor`.
+
+    `data-parallax-factor` specifies a decimal value that controls how much faster or slower the element scrolls relative to the scrolling speed:
+    * A value greater than 1 scrolls the element upward (element scrolls faster) when the user scrolls down the page.
+    * A value less than 1 scrolls the element downward (element scrolls slower) when the user scrolls downward.
+  -->
+  <!-- ### Title parallax -->
+  <div class="header">
+    <h1 amp-fx="parallax" data-parallax-factor="1.3">
+      
+    </h1>
+    <amp-img class="first-image" layout="responsive" src="https://picsum.photos/1600/900?image=1069"></amp-img>
+  </div>
+
+  <!-- ### Parallax image window -->
+  <div class="parallax-image-window">
+    <amp-img amp-fx="parallax" data-parallax-factor="1.1" width="1280" height="873" layout="responsive" src="/image/myanmar.jpg" alt="Picture of an elephant"></amp-img>
+  </div>
+
+  <div class="content-area">
+      <span class="blog-content"></span>
+  </div>
+
+
+
+  <div class="pimg1">
+      <div class="ptext">
+        
+            <span class="border title"></span>
+        
+      </div>
+    </div>
+  
+    <section class="section section-light">
+      <h2>Section One</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!
+      </p>
+    </section>
+  
+    <div class="pimg2">
+      <div class="ptext">
+        <span class="border trans">
+          Image Two Text
+        </span>
+      </div>
+    </div>
+  
+    <section class="section section-dark">
+      <h2>Section Two</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in.
+      </p>
+    </section>
+  
+    <div class="pimg3">
+      <div class="ptext">
+        <span class="border trans">
+          Image Three Text
+        </span>
+      </div>
+    </div>
+  
+ 
+  
+    
+
+</body>
+<script>
+
+  function getURLParams(url){
+    var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+    return queryString;
+    //grab the query from the url to start displaying the content but need to remove the %20 from it
+    }
+
+  var url = window.location.href;
+  var urlParams = getURLParams(url); 
+   //console.log('url' + urlParams);
+   var replaced = urlParams.replace(/%20/g, " ");
+
+
+   fetch('http://localhost:5000/posts')
+   
+     .then(function(response){
+      return response.json()
+     })
+     .then(function(previousPromiseResolved){
+       //console.log(previousPromiseResolved)
+       const resultsSection = document.querySelector('.blog-content')
+       const titleSection = document.querySelector('.title')
+       resultsSection.innerHTML = '';
+       let html = '';
+       previousPromiseResolved.forEach(post =>{
+        // console.log(post.title)
+         //console.log(replaced)
+          if (post.title == replaced){
+            html+=
+           `<h1> ${post.title} </h1>
+           <li> 
+                <div data-href="list-content ${post.title}"> ${post.content} </div> 
+              </li>`
+            titleSection.innerHTML = post.title
+              //console.log("html" + html)
+          }
+       })
+       resultsSection.innerHTML = html;
+     })
+     .catch(function(err){
+       console.log('Catch', err);
+     })
+    
+
+    
+  
+
+   
+  </script>
+
+</html>
