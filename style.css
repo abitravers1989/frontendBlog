@@ -1,0 +1,456 @@
+body {
+    color: #856685;
+    font-family: "futura-pt",sans-serif;
+    font-size: 1.1rem;
+}
+
+div#content {
+    background: #fff;
+}
+
+div.homepage #intro {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position:  0;
+    background-size: cover;
+    background-color: #928dab;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    position: relative;
+} 
+
+.square-table {
+    color: #7889a3;
+}
+
+.font-cubano-sharp {
+    font-family: "cubano-sharp",sans-serif;
+}
+.font-futura-pt-bold {
+    font-family: "cubano-sharp",sans-serif;
+}
+ 
+.slideout-panel {
+    background: none;
+}
+
+.font-weight-black {
+    font-weight: 900 !important;
+}
+
+.bg-blue {
+    background: #89a7d8 !important;
+}
+
+.bg-white {
+    background: white !important;
+}
+
+.bg-purple {
+    background: #e2e6f3 !important;
+}
+
+.text-blue {
+    color: #89a7d8 !important;
+}
+
+.text-red {
+    color: #ec5741 !important;
+    font-weight: bold;
+}
+
+.text-purple {
+    color: #866585 !important;
+    font-weight: bold;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+svg {
+    max-width: 100%;
+}
+
+#content .logo {
+    margin: 40px 0;
+}
+
+.homepage-text {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.homepage-text p {
+    line-height: 2em;
+}
+
+.homepage-text p.bigger {
+    font-size: 1.5em;
+}
+
+.homepage-text i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.homepage-text.rounded {
+    border-radius: 50px !important;
+}
+
+#menu a:hover,
+#menu a.active {
+    color: #866585;
+    background: white;
+}
+
+.country-wrapper img {
+    width: 40%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.country-wrapper span {
+    width: 50%;
+    display: inline-block;
+}
+  
+.red-marker {
+    height: 30px;
+    background: #f1462a !important;
+    display: inline-block;
+    margin-top: 21px;
+}
+
+.birthplaces-map {
+    width: 100%;
+}
+
+.centered-div-wrapper {
+    position: relative;
+}
+
+.speed-spot span:first-child {
+    font-size: 2em;
+    line-height: 1;
+}
+
+.speed-spot span:last-child {
+    font-size: 1.3em;
+    line-height: 1em;
+    display: block;
+}
+
+.centered-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);    
+}
+
+.centered-div.bigger {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -1.5em;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);    
+}
+
+#average-worth {
+    font-size: 4em;
+    line-height: 1;
+    font-weight: 700;
+    display: block;
+}
+
+
+#average-worth .sub {
+    font-size: 0.6em;
+}
+
+.heading-size {
+    font-size: 2.5em;
+}
+
+.huge-font {
+    font-size: 7rem;
+    line-height: 5rem;
+}
+
+canvas {
+    height: 600px;
+}
+
+.legend + span {
+    display: inline-block;
+    vertical-align: super;
+    margin-left: 10px;
+}
+
+.bg-grey {
+    background: #ddd;
+}
+
+.company-logo {
+    display: inline-block;
+    margin: 10px;
+}
+
+.company-name {
+    display: inline-block;
+    border-right: 1px solid #9db6db;
+    padding-right: 6px;
+    line-height: 1rem;
+    margin-right: 5px;
+    color: #9db6db;
+}
+.companies > div:last-child {
+    border-right: none;
+}
+
+/* HEADER */
+
+.menu-toggle {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.menu-toggle:focus,
+.menu-toggle:active {
+    outline: none;
+}
+
+.hamburger {
+    padding: 11px 9px 5px;
+    background: #f3452b;
+}
+
+.slideout-menu {
+    overflow-y: auto;
+}
+  
+/* SIDEBAR */
+
+.sidebar-logo {
+    font-size: 1.5rem;
+    line-height: 0.9;
+}
+
+ul#menu {
+    margin: 0;
+    padding: 0;
+}
+
+ul#menu li.active a,
+ul#menu li.active a:hover {
+    background: #f0c748;
+}
+
+ul#menu li a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+#menu img {
+    height: 35px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+ul#menu li.active a img,
+ul#menu li.active a:hover img {
+    filter: invert(1);
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background: white;
+}
+
+@media screen and (max-width:768px) {
+
+    #result {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .homepage-text p {
+        text-align: center;
+    }    
+    
+    .hidemob {
+    display:none;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    footer.col-5 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;        
+    }    
+
+    #content .logo {
+        margin: 20px 0;
+    }    
+
+    .homepage-text p {
+        line-height: 1.5em;
+    }    
+
+    .homepage-text.text-center {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;        
+    }
+
+    aside .logo {
+        width: 100px;
+        margin: 0 auto;
+        display: block;        
+    }
+
+    aside > div {
+        padding: 1rem 1rem 0.5rem 1rem !important;
+    }
+
+    ul#menu li a {
+        padding: 5px;
+    }
+
+   
+
+}
+
+
+@media screen and (min-width: 480px) {
+     #average-worth {
+    font-size: 6em;
+    }
+
+}
+
+@media screen and (min-width: 780px) {
+
+   
+    .lead {
+        line-height: 1.5;
+        font-size: 1.25rem;
+    }
+
+    .h1, h1 {
+        font-size: 2.5rem;
+    }
+
+    .h2, h2 {
+    font-size: 2rem;
+    }
+
+    h2.slide-heading {
+        padding-left: 0px;
+    }
+
+    img.heading-logo {
+        width: 50px;
+        left: -65px;
+        top: 50%;
+        margin-top: -25px;
+    }
+
+    .main-heading span {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+
+    .slideout-panel {
+        margin-left: 270px;
+    }
+
+    .slideout-menu {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none;
+    }  
+
+}
+
+@media screen and (min-width: 991px) {
+
+     #average-worth {
+    font-size: 8em;
+    }
+
+
+    .slideout-panel {
+        margin-left: 330px;
+    }
+
+    .sidebar-logo {
+        font-size: 2rem;
+        line-height: 0.9;
+    }
+
+}
+    
+@media screen and (min-width: 1200px) {
+
+    .speed-spot span:first-child {
+        font-size: 3em;
+    }
+
+     #average-worth {
+    font-size: 10em;
+    }
+
+    .canvas-annotation {
+        position: absolute;left: 15px;
+    }
+    
+    body.homepage #intro {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: cover;
+    background-color: #928dab;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 1000px;
+}
+
+.min1000 {
+min-height:1000px;
+}
+ 
+}     
+
+@media screen and (max-width: 350px) {
+
+    .col-6.col-xl-3.col-special {
+        font-size: 0.9rem;
+    }
+ 
+}     
+
+@media screen and (max-width: 1600px) {
+    canvas {
+        margin-left: 0;
+    }
+}

@@ -1,5 +1,12 @@
 
 
+
+Put header and footer in template and blog
+
+
+
+
+
 formatting on the blog posts.
 
 fix go back to home page 

@@ -23,14 +23,15 @@
     --lighblue: #17A6D6;
     }
 
-    .top-padding{
+    /* .top-padding{
         display: grid;
         height: 20px;
-    }
+    } */
 
     nav{
-        background-color: white;
+        background-color: #2E2727;
         height: 70px;
+     
     }
     .navigation{
         /* background-color: white; */
@@ -46,9 +47,9 @@
         /* justify-self: center; */
        
         font-family: 'Montserrat', sans-serif;
-        font-style: italic;
+    
         font-weight: 1000;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-decoration: none;
         margin-left: 8px;
         /* justify-content: left 70px; */
@@ -58,6 +59,7 @@
     .nav-link{
         text-decoration: none;
         color: var(--darkblue);
+        color: white;
     }
 
     .box{
@@ -95,6 +97,21 @@
     /* margin: 25%; */
     }
 
+    .blogPostsArea{
+        width: 100vw;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 1000;
+        font-size: 2rem;
+        text-decoration: none;
+        margin-left: 8px;
+        
+        color: white;
+    }
+
+    .postsWrapper{
+        height: 100vh;
+    }
+
 </style>
 
 <body>
@@ -121,28 +138,28 @@
 
             <div class="blogTitle">
                 <h1>Blog Title</h1>
+                <div class="cloudwrapper">
+                        <div class="cloud"></div>
+                        <div class="cloud2 wrapper"></div>
+                        <div class="cloud3 wrapper"></div>        
+                    </div>
             </div>
-
-            <div class="postContent"> </div>
-
-            <div class="cloudwrapper">
-                <div class="cloud"></div>
-                <div class="cloud2 wrapper"></div>
-                <div class="cloud3 wrapper"></div>        
-            </div>
-
-            <div class="box"> </div>
 
             <div class = "createBlog"> Create new Blog</div>
 
-            <div class="box2"> Show Blogs 
+            <div class="box"></div>
+
+            <div class ="postsWrapper">
+   
+            <div class="blogPostsArea"> Blog Posts 
+                </div>
+                <br>
                 <ul class="showResults">
 
                 </ul>
     
-    
             </div>
-
+            
 
     </div> 
 
