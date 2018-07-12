@@ -60,6 +60,40 @@
       font-size: 2.9em;
     } */
 
+        nav{
+        background-color: #2E2727;
+        height: 70px;
+     
+    }
+    .navigation{
+        /* background-color: white; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;
+        grid-auto-rows: minmax(70px, auto);             
+    }
+
+    .navigation > li {
+        display: grid;
+        align-self: center;
+        /* justify-self: center; */
+       
+        font-family: 'Montserrat', sans-serif;
+    
+        font-weight: 1000;
+        font-size: 1.5rem;
+        text-decoration: none;
+        margin-left: 8px;
+        /* justify-content: left 70px; */
+        
+    }
+
+    .nav-link{
+        text-decoration: none;
+        color: var(--darkblue);
+        color: white;
+    }
+
     .title {
       background-color: black;
       color: white;
@@ -178,6 +212,15 @@
 <body>
 
 
+  <div class="top-padding"></div>
+  <nav>
+      <ul class="navigation">
+          <li>
+              <a class="nav-link homePageLink"> Home </a>
+          </li>
+
+      </ul>
+  </nav>
 
 
 <div class="wrapper">
@@ -220,7 +263,7 @@
     <div class="pimg3">
       <div class="ptext">
        <!-- href wont work here .. need js to change url as href just appends it to end -->
-            <a class="border trans homePageLink" >Go Back to Home Page</a>
+            <a class="homePageLink" >Home Page</a>
         
       
       </div>
