@@ -39,8 +39,10 @@
         --lighblue: #17A6D6;
         }
         
-  .body{
-    background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+  body{
+
+    position: relative;
+    margin: 0px;
 
   }
 
@@ -63,14 +65,20 @@
         nav{
         background-color: #2E2727;
         height: 70px;
-     
+        position: fixed;  
+        z-index: 5; 
+        width: 100%;   
     }
+
     .navigation{
         /* background-color: white; */
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         list-style: none;
-        grid-auto-rows: minmax(70px, auto);             
+        grid-auto-rows: minmax(70px, auto);
+
+        margin-top: 0px;
+                   
     }
 
     .navigation > li {
@@ -253,16 +261,7 @@
       </div>
     </div>
   
-    <!-- <section class="section section-light">
-      <h2>Section Two</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in.
-      </p>
-    </section>
-  
-    <div class="pimg3">
-      <div class="ptext">
-       <!-- href wont work here .. need js to change url as href just appends it to end -->
+
             <a class="homePageLink" >Home Page</a>
         
       

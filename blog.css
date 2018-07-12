@@ -6,89 +6,75 @@
     --lighblue: #17A6D6;
 }
 
-    nav{
-        background-color: #2E2727;
-        height: 70px;
-     
-    }
-    .navigation{
-        /* background-color: white; */
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        list-style: none;
-        grid-auto-rows: minmax(70px, auto);             
-    }
-
-    .navigation > li {
-        display: grid;
-        align-self: center;
-        /* justify-self: center; */
-       
-        font-family: 'Montserrat', sans-serif;
+nav{
+    background-color: #2E2727;
+    height: 70px;
     
-        font-weight: 1000;
-        font-size: 1.5rem;
-        text-decoration: none;
-        margin-left: 8px;
-        /* justify-content: left 70px; */
-        
-    }
+}
+.navigation{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    grid-auto-rows: minmax(70px, auto);             
+}
 
-    .nav-link{
-        text-decoration: none;
-        color: var(--darkblue);
-        color: white;
-    }
+.navigation > li {
+    display: grid;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-left: 8px;  
+}
 
-    .box{
-        width: 80px;
-        height: 80px;
-        background-color: aqua;
-        transition: width 0.3s, height 0.3s;
-        /* transition-property: width;
-        transition-duration: 2s;
-        transition-property: height;
-        transition-duration: 2s; */
-        transition-timing-function: linear;
-    }
+.nav-link{
+    text-decoration: none;
+    color: var(--darkblue);
+    color: white;
+}
 
-    .box:hover{
-        width: 300px;
-        height: 300px;
-    }
+.box{
+    width: 80px;
+    height: 80px;
+    background-color: aqua;
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: linear;
+}
 
-     .box2{
-        width: 80px;
-        height: 80px;
-        background-color:white;
-       
-    }
+.box:hover{
+    width: 300px;
+    height: 300px;
+}
 
-/* here make it fill a few more grib columns .. change the space it occupies  */
-    .boxChange {
-        background-color: black; 
-        margin: 4%;
-        padding: 10%;
-        width: 90%;
-        height: 600px;
-        color: white;
-    /* margin: 25%; */
-    }
+.box2{
+    width: 80px;
+    height: 80px;
+    background-color:white;
+}
 
-    .blogPostsArea{
-        width: 100vw;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 1000;
-        font-size: 2rem;
-        text-decoration: none;
-        margin-left: 8px;
-        
-        color: white;
-    }
+.boxChange {
+    background-color: black; 
+    margin: 4%;
+    padding: 10%;
+    width: 90%;
+    height: 600px;
+    color: white;
+}
 
-    .postsWrapper{
-        height: 100vh;
-    }
+.blogPostsArea{
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-left: 8px;
+    color: white;
+}
+
+.postsWrapper{
+    height: 100vh;
+}
 
 body {
     font-size: 1rem;
@@ -181,7 +167,6 @@ container ::after {
     font-size: 80px;
     padding: 10%;
     height: 65vh;
-    /* margin: 25%; */
     word-spacing: -5px;;
     line-height: 0.9;
 }
@@ -195,41 +180,42 @@ container ::after {
 @keyframes move{
     from {top: 0px;}
     to {top: 90%;}
-  }
+}
   
-  @keyframes moveSideways{
-      from {left: 0px;}
-      to {left: 96%;}
-    }
+@keyframes moveSideways{
+    from {left: 0px;}
+    to {left: 96%;}
+}
 
- .cloud{    
-        height: 50px;
-        width: 50px;
-        border-radius: 50px;
-        position: absolute;
-        left: -250px;
-        box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-        /* z-index: -9; */
-        animation: move 5s infinite;
-     }
-
-  .cloud2{     
+.cloud{    
     height: 50px;
     width: 50px;
     border-radius: 50px;
     position: absolute;
     left: -250px;
-    box-shadow: 350px 25px blue, 380px 5px blue, 410px 25px white, 380px 25px white;
-    /* z-index: -9; */   
-  }
+    box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
+    animation: move 5s infinite;
+}
 
-  .cloud3{     
+.cloud2{     
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: absolute;
+    left: -250px;
+    box-shadow: 350px 25px blue, 380px 5px blue, 410px 25px white, 380px 25px white; 
+}
+
+.cloud3{     
     height: 50px;
     width: 50px;
     border-radius: 50px;
     position: absolute;
     left: 0%;
     box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-    /* z-index: -9; */
     animation: moveSideways 5s infinite;
+}
+
+  textarea.textArea{
+      visibility: hidden;
   }
