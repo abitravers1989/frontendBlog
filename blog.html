@@ -16,103 +16,47 @@
 
 <body>
     <div class="container content-wrap" id="page-container">
+    <div class="top-padding"></div>
+        <nav>
+            <ul class="navigation">
+                <li>
+                    <a class="nav-link" href="index.html"> Home </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/game/game.html"> Game </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/game/game.html"> Game </a>
+                </li>
+            </ul>
+        </nav>
 
+    <div class="blogTitle">
+                
+        <h1>Blog Title</h1>
+        <div class="cloudwrapper">
+            <div class="cloud"></div>
+            <div class="cloud2 wrapper"></div>
+            <div class="cloud3 wrapper"></div>        
+         </div>
+     </div>
 
-            <div class="top-padding"></div>
-            <nav>
-                <ul class="navigation">
-                    <li>
-                        <a class="nav-link" href="index.html"> Home </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="/game/game.html"> Game </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="/game/game.html"> Game </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="blogTitle">
-                <h1>Blog Title</h1>
-                <div class="cloudwrapper">
-                        <div class="cloud"></div>
-                        <div class="cloud2 wrapper"></div>
-                        <div class="cloud3 wrapper"></div>        
-                    </div>
-            </div>
-
-            <div class ="postsWrapper">
+    <div class ="postsWrapper">
    
-            <div class="blogPostsArea"> Blog Posts 
-                </div>
-                <br>
-                <ul class="showResults">
+        <div class="blogPostsArea"> Blog Posts  </div>
+        <br>
+        <ul class="showResults">
 
-                </ul>
+        </ul>
     
-            </div>
+    </div>
 
-            <div class = "createBlog"> Create new Post</div>
+    <div class = "createBlog"> Create new Post</div>
             
 
     </div> 
 
-
-
-     <script>
-               
-        function init(){
-            addEventListener2()
-        }  
-
-    fetch('http://localhost:5000/posts')
-    .then(response => response.json())
-    .then(jsonResponse => listBlogs(jsonResponse))
-        .catch(function(error)
-        {
-            console.log(error)
-        });
-
-    function listBlogs(jsonData){
-        const resultsSection = document.querySelector('.showResults')
-        resultsSection.innerHTML = '';
-        let html = '';
-        jsonData.forEach(post => {
-            html+=
-            `<li> 
-                <div data-href="${post.title}"> ${post.title}:  ${post.postTime} </div> 
-             </li>`
-           // http://localhost:5000/posts/${post.title}"
-          // <button id="buttonID' class= "posts ${post.id}" type="button"> Show Post </button>
-        });
-
-        resultsSection.innerHTML = html;
-    }
-
-      function addEventListener2(){
-      //blogTitle = document.querySelector('.blogTitle');
-      //blogTitle.addEventListener("mouseover", changeColor)
-      const showResults = document.querySelector('.showResults');
-      showResults.addEventListener("click", goToNewPage)
-    }
-
-    function goToNewPage(e){
-        console.log(e)
-        event.stopPropagation();
-        const blogTitle = event.target.attributes[0].value
-        console.log(blogTitle)
-        //const blogTitleWithoutWhiteSpace = blogTitle.replace(/\s+/g, '');
-
-        //need to remove the %20 from it 
-        window.location.href = `template.html/?${blogTitle}`
-    }
-
-        init()
-
-
-        </script>
-
+    <script src="blog.js"></script>
 </body>
 
 
