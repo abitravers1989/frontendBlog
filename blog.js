@@ -1,3 +1,4 @@
+
 function init(){
     addEventListener2()
     clickedCreatePost()
@@ -16,9 +17,11 @@ function listBlogs(jsonData){
     resultsSection.innerHTML = '';
     let html = '';
     jsonData.forEach(post => {
+        let formattedTime = moment(post.postTime).format('MMMM Do YYYY');
+        // let formattedTime = moment(post.postTime).format('MMMM Do YYYY, h:mm:ss a');
         html+=
         `<li> 
-            <div data-href="${post.title}"> ${post.title}:  ${post.postTime} </div> 
+            <div data-href="${post.title}"> ${formattedTime}:        ${post.title}</div> 
         </li>`
 });
     resultsSection.innerHTML = html;

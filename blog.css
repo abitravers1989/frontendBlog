@@ -103,47 +103,6 @@ div {
     display: block;
 }
 
-
-#page-container {
-    opacity: 1;
-    height: 100%;
-    position: relative;
-    right: 0;
-    transition: all .7s,right .5s;
-    -webkit-transition: all .7s,right .5s;
-    -moz-transition: .7s all,.5s right;
-    -o-transition: .7s all,.5s right;
-}
-
-container :after, :before {
-    box-sizing: border-box;
-    outline: 0;
-}
-
-container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    list-style: none;
-}
-
-container ::before {
-    box-sizing: border-box;
-    outline: 0;
-    display: table;
-    content: " ";
-    box-sizing: border-box;
-    outline: 0;
-}
-
-container ::after {
-    box-sizing: border-box;
-    outline: 0;
-    display: table;
-    content: " ";
-}
-
-
 .blogTitle{
     color: white;
     margin: 2%;
@@ -159,18 +118,6 @@ container ::after {
       -o-transition: color 2s, font-size 2s;
          transition: color 2s, font-size 2s;
 }
-
-.createBlog{
-    color: white;
-    margin: 2%;
-    font-family: 'Gaegu', cursive;
-    font-size: 80px;
-    padding: 10%;
-    height: 65vh;
-    word-spacing: -5px;;
-    line-height: 0.9;
-}
-
 
 .blogTitle:hover{
     font-size: 110px;
@@ -216,6 +163,23 @@ container ::after {
     animation: moveSideways 5s infinite;
 }
 
-  textarea.textArea{
-      visibility: hidden;
-  }
+.showResults{
+    margin: 2%;
+    font-family: 'Gaegu', cursive;
+    font-size: 25px;
+}
+
+.createBlog{
+    color: white;
+    margin: 0.5%;
+    font-family: 'Gaegu', cursive;
+    font-size: 80px;
+    padding: 10%;
+    height: 65vh;
+    word-spacing: -5px;;
+    line-height: 0.9;
+}
+
+textarea.textArea{
+    visibility: hidden;
+}
