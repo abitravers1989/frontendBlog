@@ -183,3 +183,7 @@ div {
 textarea.textArea{
     visibility: hidden;
 }
+
+textarea.textArea.is-visible{
+    visibility: visible;
+}

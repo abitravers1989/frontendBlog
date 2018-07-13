@@ -45,8 +45,7 @@ function clickedCreatePost(){
 
 function createTextBox(){
     const textArea = document.querySelector('.textArea');
-    console.log(textArea);
-    textArea.style.visibility = 'visible'; 
+    textArea.classList.toggle('is-visible');
 }
     
 
