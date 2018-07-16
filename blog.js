@@ -27,6 +27,14 @@ function listBlogs(jsonData){
     resultsSection.innerHTML = html;
 }
 
+function clickedSearchButton(){
+
+}
+
+function searchTitle(){
+
+}
+
 function addEventListener2(){
     const showResults = document.querySelector('.showResults');
     showResults.addEventListener("click", goToNewPage)
@@ -47,6 +55,12 @@ function createTextBox(){
     const textArea = document.querySelector('.textArea');
     textArea.classList.toggle('is-visible');
 }
+// do srarah's promise to show this then post it 
     
 
 init()
+
+
+
+//how to see source of any website
+//window.fetch('https://developer.mozilla.org/en-US/').then(returnedData => returnedData.text()).then(body => console.log(body));

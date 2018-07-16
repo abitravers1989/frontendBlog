@@ -1,51 +1,186 @@
 
-
 :root {
---lightgrey: #F7F7F7;
---darkblue: #00151C;
---blue: #002C4C;
---midblue: #17A6D6;
---lighblue: #17A6D6;
+    --lightgrey: #F7F7F7;
+    --darkblue: #00151C;
+    --blue: #002C4C;
+    --midblue: #17A6D6;
+    --lighblue: #17A6D6;
 }
 
 .body{
-background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+    background: linear-gradient(to bottom,var(--blue) 0%,var(--lighblue) 100%);
+    position: relative;
+    margin: 0px;
+}
+
+.html{
+    height:100%;
+    margin:0;
+    font-size:16px;
+    font-family:"Lato", sans-serif;
+    font-weight:400;
+    line-height:1.8em;
+    color:#666;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .header {
-position: relative;
-overflow: hidden;
-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .header h1 {
-color: white;
-bottom: 10%;
-left: 10px;
-position: absolute;
-z-index: 1;
-
-font-size: 2.9em;
+    color: white;
+    bottom: 10%;
+    left: 10px;
+    position: absolute;
+    z-index: 1;
+    font-size: 2.9em;
 }
 
+nav{
+    background-color: #2E2727;
+    height: 70px;
+    position: fixed;  
+    z-index: 5; 
+    width: 100%;   
+  }
+
+  .navigation{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    grid-auto-rows: minmax(70px, auto);
+    margin-top: 0px;               
+  }
+
+  .navigation > li {
+      display: grid;
+      align-self: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 1000;
+      font-size: 1.5rem;
+      text-decoration: none;
+      margin-left: 8px;
+  }
+
+  .nav-link{
+      text-decoration: none;
+      color: var(--darkblue);
+      color: white;
+  }
+
 .title {
-background-color: black;
-color: white;
+    background-color: black;
+    color: white;
 }
 
 .parallax-image-window {
-overflow: hidden;
+    overflow: hidden;
 }
 
 .parallax-image-window amp-img {
-margin-bottom: -5vh;
+    margin-bottom: -5vh;
 }
 .first-image{
-width: 100vw;
-height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
-
 
 .content-area{      
-height: 100vh;
+    height: 100vh;
 }
+
+ .pimg1, .pimg2, .pimg3{
+    position:relative;
+    opacity:0.70;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.pimg1{
+    background-image:url('/image/myanmar.jpg');
+    min-height:100vh;
+}
+
+.pimg2{
+    background-image:url('/image/myanmar.jpg');
+    min-height:400px;
+}
+
+.pimg3{
+    background-image:url('/image/myanmar.jpg');
+    min-height:400px;
+}
+
+.section{
+    text-align:center;
+    padding:50px 80px;
+}
+
+.section-light{
+    background-color:#f4f4f4;
+    color:#666;
+}
+
+.section-dark{
+    background-color:#282e34;
+    color:#ddd;
+}
+
+.content-area{
+    text-align:left;
+}
+
+.ptext{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:34px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    z-index: 10;
+}
+
+.ptext .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px;
+}
+
+.ptext .border.trans{
+    background-color:transparent;
+}
+
+.blog-content{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.li{
+    display: none;
+}
+
+.movable-div{
+    z-index: 10;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-family: "antoni-web","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 180px;
+    font-size: 11vw;
+    letter-spacing: -0.02em;
+    position: relative;
+    vertical-align: middle
+}
+
+@media(max-width:568px){
+    .pimg1, .pimg2, .pimg3{
+    background-attachment:scroll;
+    }
+}
+  
