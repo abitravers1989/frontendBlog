@@ -129,6 +129,7 @@ nav{
 .section-dark{
     background-color:#282e34;
     color:#ddd;
+    height: 100px;
 }
 
 .content-area{

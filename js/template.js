@@ -4,25 +4,6 @@ homePageLink.addEventListener('click', function(e){
   window.location.replace("http://localhost:8080/blog");
 })  
 
-
-
-  function moveDiv(){
-      var movableDiv = document.querySelector('.movable-div');
-      var movableDivbottom = movableDiv.getBoundingClientRect().bottom;
-      var movableDivHeight = movableDiv.offsetHeight;
-      var surroundingDiv = document.querySelector('.wrapper');
-      var topOfDiv = surroundingDiv.getBoundingClientRect().top;
-      var bottomOfDiv = surroundingDiv.getBoundingClientRect().bottom;
-  }
-
-
-    window.addEventListener('scroll', function(e){ 
-      movableDiv.style.bottom = bottomOfDiv;
-      movableDiv.position = "absolute";
-    })
-
-  moveDiv();
-
   function getURLParams(url){
       var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
       return queryString;
@@ -54,4 +35,14 @@ homePageLink.addEventListener('click', function(e){
      .catch(function(err){
        console.log('Catch', err);
      })
-    
+
+
+     function setDarkSectionDivHeight(){
+       const a = document.getElementsByClassName('section-dark');
+       console.log(a)
+       const b = document.getElementsByClassName('content-area');
+       const d = b[0].offsetHeight
+       console.log(d + 25);
+       a[0].style.height = (d + 25);
+     }
+ setDarkSectionDivHeight()
