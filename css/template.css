@@ -89,7 +89,13 @@ nav{
 }
 
 .content-area{      
-    height: 100vh;
+    min-height: 100px;
+    overflow: hidden;
+    text-align:left;
+}
+
+.blog-content{
+    height: fit-content;
 }
 
  .pimg1, .pimg2, .pimg3{
@@ -129,11 +135,8 @@ nav{
 .section-dark{
     background-color:#282e34;
     color:#ddd;
-    height: 100px;
-}
-
-.content-area{
-    text-align:left;
+    /* min-height: 100px; */
+    overflow: hidden;
 }
 
 .ptext{

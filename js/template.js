@@ -1,5 +1,6 @@
 var homePageLink = document.querySelector('.homePageLink');
 
+
 homePageLink.addEventListener('click', function(e){
   window.location.replace("http://localhost:8080/blog");
 })  
@@ -31,18 +32,20 @@ homePageLink.addEventListener('click', function(e){
            `<div data-href="list-content ${returnedPost.title}"> ${returnedPost.content} </div>`        
         upDateTitle(returnedPost);     
        resultsSection.innerHTML = html;
+       setDarkSectionDivHeight();
      })
      .catch(function(err){
        console.log('Catch', err);
      })
 
-
+//attach to event listener 
      function setDarkSectionDivHeight(){
-       const a = document.getElementsByClassName('section-dark');
-       console.log(a)
-       const b = document.getElementsByClassName('content-area');
-       const d = b[0].offsetHeight
-       console.log(d + 25);
-       a[0].style.height = (d + 25);
+       const sectionDark = document.getElementsByClassName('section-dark');
+       const contentArea = document.getElementsByClassName('content-area');
+       const contentAreaHeight = contentArea[0].offsetHeight
+       const newHeight = contentAreaHeight + 45;
+       console.log(newHeight) 
+       console.log(sectionDark[0].style.height)      
+       sectionDark[0].style.height = newHeight.toString() + "px";
+       console.log(sectionDark[0].style.height)  
      }
- setDarkSectionDivHeight()
