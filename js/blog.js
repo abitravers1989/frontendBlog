@@ -1,7 +1,7 @@
 
 function init(){
     addEventListener2()
-    // clickedCreatePost()
+    clickedCreatePost()
 }  
 
 //const headerData = { 'clinetPassword': 'xxxx'}
@@ -62,15 +62,13 @@ function createTextBox(){
     textArea.classList.toggle('is-visible');
 }
 
-clickedCreatePost();
 const textArea = document.querySelector('.textArea');
 
 const saveButton = document.getElementsByTagName("button");
-console.log(saveButton);
-saveButton.addEventListener('submit', postTexttoAPI);
+saveButton[1].addEventListener('click', postTexttoAPI);
 
 function postTexttoAPI(){
-    console.log(textArea.innerText)
+    console.log(textArea.value)
 }
     
 
