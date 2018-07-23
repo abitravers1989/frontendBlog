@@ -1,6 +1,5 @@
 var homePageLink = document.querySelector('.homePageLink');
 
-
 homePageLink.addEventListener('click', function(e){
   window.location.replace("http://localhost:8080/blog");
 })  
@@ -20,7 +19,7 @@ homePageLink.addEventListener('click', function(e){
       titleSection.innerHTML = returnedPost.title
    }
   
-   fetch(`http://localhost:5000/posts/${replaced}`)
+   fetch(`https://api.abitravers.com/posts/${replaced}`)
      .then(function(response){
       return response.json()
      })
@@ -32,20 +31,7 @@ homePageLink.addEventListener('click', function(e){
            `<div data-href="list-content ${returnedPost.title}"> ${returnedPost.content} </div>`        
         upDateTitle(returnedPost);     
        resultsSection.innerHTML = html;
-       setDarkSectionDivHeight();
      })
      .catch(function(err){
        console.log('Catch', err);
      })
-
-//attach to event listener 
-     function setDarkSectionDivHeight(){
-       const sectionDark = document.getElementsByClassName('section-dark');
-       const contentArea = document.getElementsByClassName('content-area');
-       const contentAreaHeight = contentArea[0].offsetHeight
-       const newHeight = contentAreaHeight + 45;
-       console.log(newHeight) 
-       console.log(sectionDark[0].style.height)      
-       sectionDark[0].style.height = newHeight.toString() + "px";
-       console.log(sectionDark[0].style.height)  
-     }

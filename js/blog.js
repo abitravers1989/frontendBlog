@@ -1,10 +1,16 @@
 
 function init(){
     addEventListener2()
-    clickedCreatePost()
+    // clickedCreatePost()
 }  
 
-fetch('http://localhost:5000/posts')
+//const headerData = { 'clinetPassword': 'xxxx'}
+
+// fetch('http://ec2-54-229-103-97.eu-west-1.compute.amazonaws.com:8000/posts', {
+//     method: 'GET',
+//     headers: headerData
+// })
+fetch('https://api.abitravers.com/posts')
     .then(response => response.json())
     .then(jsonResponse => listBlogs(jsonResponse))
 .catch(function(error)
@@ -37,7 +43,7 @@ function searchTitle(){
 
 function addEventListener2(){
     const showResults = document.querySelector('.showResults');
-    showResults.addEventListener("click", goToNewPage)
+    showResults.addEventListener('click', goToNewPage)
 }
 
 function goToNewPage(e){
@@ -48,14 +54,24 @@ function goToNewPage(e){
 
 function clickedCreatePost(){
     const createPostDiv = document.querySelector('.createBlog');
-    createPostDiv.addEventListener("click", createTextBox)
+    createPostDiv.addEventListener('click', createTextBox)
 }
 
 function createTextBox(){
     const textArea = document.querySelector('.textArea');
     textArea.classList.toggle('is-visible');
 }
-// do srarah's promise to show this then post it 
+
+clickedCreatePost();
+const textArea = document.querySelector('.textArea');
+
+const saveButton = document.getElementsByTagName("button");
+console.log(saveButton);
+saveButton.addEventListener('submit', postTexttoAPI);
+
+function postTexttoAPI(){
+    console.log(textArea.innerText)
+}
     
 
 init()
