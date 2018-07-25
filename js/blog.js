@@ -63,15 +63,19 @@ saveButton[1].addEventListener('click', postTexttoAPI);
 
 function postTexttoAPI(){
     const headerData = { 'Content-Type':'application/json', 'clinetPassword': 'xxxxx'}
-    const bodyFromPage = { 'content': "textArea.value", userName: "Abi", title: "randomTitle"}
+    const text = textArea.value
+    const bodyFromPage = { 'content': text, userName: "Abi", title: "NewTest"}
     try {
         fetch('https://api.abitravers.com/posts', {
             method: 'POST',
             headers: headerData,
-            body: JSON.stringify({ 'content': "textArea.value", userName: "Abi", title: "randomTitle"})
+            body: JSON.stringify(bodyFromPage)
+            
         })
         //add stream reader for readablestream
-        .then(function(response){ return console.log(response.body + "Response Status" + response.status)})
+        .then(function(response){ 
+            return console.log("post" + textArea.value + "Response Status" + response.status)
+        })
     }
        //add logging in
     catch(error){
