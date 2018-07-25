@@ -62,21 +62,21 @@ const saveButton = document.getElementsByTagName("button");
 saveButton[1].addEventListener('click', postTexttoAPI);
 
 function postTexttoAPI(){
-    const headerData = { 'clinetPassword': 'xxxx'}
-    let randomTitle = 1;
-    randomTitle++;
-    const bodyFromPage = { 'content': textArea.value, userName: "Abi", title: randomTitle}
+    const headerData = { 'Content-Type':'application/json', 'clinetPassword': 'xxxxx'}
+    const bodyFromPage = { 'content': "textArea.value", userName: "Abi", title: "randomTitle"}
     try {
         fetch('https://api.abitravers.com/posts', {
             method: 'POST',
             headers: headerData,
-            body: bodyFromPage
+            body: JSON.stringify({ 'content': "textArea.value", userName: "Abi", title: "randomTitle"})
         })
+        //add stream reader for readablestream
+        .then(function(response){ return console.log(response.body + "Response Status" + response.status)})
     }
+       //add logging in
     catch(error){
         console.log(error);
-    }
-   
+    }   
 }
     
 
