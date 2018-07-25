@@ -4,12 +4,6 @@ function init(){
     clickedCreatePost()
 }  
 
-//const headerData = { 'clinetPassword': 'xxxx'}
-
-// fetch('http://ec2-54-229-103-97.eu-west-1.compute.amazonaws.com:8000/posts', {
-//     method: 'GET',
-//     headers: headerData
-// })
 fetch('https://api.abitravers.com/posts')
     .then(response => response.json())
     .then(jsonResponse => listBlogs(jsonResponse))
@@ -68,7 +62,21 @@ const saveButton = document.getElementsByTagName("button");
 saveButton[1].addEventListener('click', postTexttoAPI);
 
 function postTexttoAPI(){
-    console.log(textArea.value)
+    const headerData = { 'clinetPassword': 'xxxx'}
+    let randomTitle = 1;
+    randomTitle++;
+    const bodyFromPage = { 'content': textArea.value, userName: "Abi", title: randomTitle}
+    try {
+        fetch('https://api.abitravers.com/posts', {
+            method: 'POST',
+            headers: headerData,
+            body: bodyFromPage
+        })
+    }
+    catch(error){
+        console.log(error);
+    }
+   
 }
     
 
