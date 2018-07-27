@@ -26,13 +26,13 @@ function listBlogs(jsonData) {
     resultsSection.innerHTML = html;
 }
 
-function clickedSearchButton() {
+// function clickedSearchButton() {
 
-}
+// }
 
-function searchTitle() {
+// function searchTitle() {
 
-}
+// }
 
 function addEventListener2() {
     const showResults = document.querySelector('.showResults');
