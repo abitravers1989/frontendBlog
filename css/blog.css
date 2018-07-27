@@ -98,62 +98,11 @@ div {
 
 .blogTitle{
     color: white;
-    margin: 2%;
+    margin: 11%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 80px;
-    padding: 10%;
-    height: 65vh;
-    /* margin: 25%; */
-    word-spacing: -5px;;
-    line-height: 0.9;
-    -webkit-transition: color 2s, font-size 2s;
-    -moz-transition: color 2s, font-size 2s;
-    -o-transition: color 2s, font-size 2s;
-        transition: color 2s, font-size 2s;
-}
-
-.blogTitle:hover{
-    font-size: 110px;
-    /* color: black; */
-}
-
-@keyframes move{
-    from {top: 0px;}
-    to {top: 90%;}
-}
-
-@keyframes moveSideways{
-    from {left: 0px;}
-    to {left: 96%;}
-}
-
-.cloud{    
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    position: absolute;
-    left: -250px;
-    box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-    animation: move 5s infinite;
-}
-
-.cloud2{     
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    position: absolute;
-    left: -250px;
-    box-shadow: 350px 25px blue, 380px 5px blue, 410px 25px white, 380px 25px white; 
-}
-
-.cloud3{     
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    position: absolute;
-    left: 0%;
-    box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-    animation: moveSideways 5s infinite;
+    word-spacing: -4px;;
+    line-height: 8.9;
+    font-size: 328%
 }
 
 .br{
@@ -168,12 +117,13 @@ div {
 }
 
 .searchButton{
-    width: fit-content;
+    width: 155px;
     padding: 10px;
-    height: 50px;
+    height: 34px;
     margin: 19px;
     position: relative;
     display: grid;
+    background-color: aliceblue;
 }
 
 .createBlog{
@@ -185,12 +135,26 @@ div {
     line-height: 0.9;
 }
 
+createBlogWrapper.br{
+    display: none;
+}
+
 textarea.textArea{
     visibility: hidden;
 }
 
 textarea.textArea.is-visible{
     visibility: visible;
+}
+
+.savePost{
+    width: 155px;
+    padding: 10px;
+    height: 34px;
+    margin: 19px;
+    position: relative;
+    display: grid;
+    background-color: aliceblue;
 }
 
 @media only screen and (min-width: 768px) {    
