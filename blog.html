@@ -1,64 +1,83 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, inital-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
-  <title>Abi Travers Blog</title>  
-  <link rel="stylesheet" href="/css/reset.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="/css/blog.css">
-  <link rel="icon" href="https://antoni.de/wp-content/themes/antoni/favicon.png">
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+    <title>Abi Travers Blog</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="icon" href="https://antoni.de/wp-content/themes/antoni/favicon.png">
+
 </head>
 
 <body>
     <!-- <div class="container content-wrap" id="page-container"> -->
-        <nav>
-            <ul class="navigation">
-                <li>
-                    <a class="nav-link" href="index.html"> Home </a>
-                </li>
-                <li>
-                    <a class="nav-link" href="/game/game.html"> Game </a>
-                </li>
-                <li>
-                    <a class="nav-link" href="/game/game.html"> Game </a>
-                </li>
-            </ul>
-        </nav>
+    <nav>
+        <ul class="navigation">
+            <li>
+                <a class="nav-link" href="index.html"> Home </a>
+            </li>
+            <li>
+                <a class="nav-link" href="/game/game.html"> Game </a>
+            </li>
+            <li>
+                <a class="nav-link" href="/game/game.html"> Game </a>
+            </li>
+        </ul>
+    </nav>
 
-        <section class="blogTitle">          
-            <h1>Blog Title</h1>
+    <div class="wrapper">
+
+        <section class="healinepWrapper background-header-image">
+            <h1 class="blogTitle">Blog Title</h1>
             <div class="cloudwrapper">
                 <div class="cloud"></div>
                 <div class="cloud2 wrapper"></div>
-                <div class="cloud3 wrapper"></div>        
+                <div class="cloud3 wrapper"></div>
             </div>
         </section>
 
         <section>
-                <div class ="postsWrapper">
-
-                        <div class="blogPostsArea"> Blog Posts  </div>
-                        <br>
-                        <ul class="showResults"></ul>
-                        <button type="submit">Search Post Titles</button>
-                        <!-- <textarea rows="35" cols="20" class="textArea"> </textarea> -->
-                 </div>
+            <div class="showPostsWrapper">
+                <div class="blogPostsArea"> Blog Posts </div>
+                <br>
+                <ul class="showResults"></ul>
+                <button type="submit">Search Post Titles</button>
+                <!-- <textarea rows="35" cols="20" class="textArea"> </textarea> -->
+            </div>
         </section>
-            
+
+        <br>
+
         <section>
-            <div class = "createBlogWrapper"> 
-                <div class = "createBlog"> Create New Post</div>
+            <div class="createBlogWrapper">
+                <div class="createBlog"> Create New Post</div>
+                <fieldset>
+                    <legend> Create New Post</legend>
+                    <ul>
+                        <li>
+                            <label for="Title">
+                                <span>Title: </span>
+                                <strong>
+                                    <abbr title="required"> * </abbr>
+                                </strong>
+                                <!-- <input type="radio" id="Title" name="Title" value="M"> MM -->
+                            </label>
+                            <input type="text" id="Title" name="blog_title">
+                        </li>
+                    </ul>
+                </fieldset>
                 <textarea rows="35" cols="100" class="textArea"> </textarea>
                 <br>
                 <button type="submit" class="savePost">Save Post</button>
-                </div>
+            </div>
         </section>
-    
-    <!-- </div>  -->
+    </div>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
     <script src="/js/blog.js"></script>
 
@@ -66,5 +85,3 @@
 
 
 </html>
-
-//dont do it toggle way / make it on click of only the title button
