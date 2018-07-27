@@ -109,9 +109,17 @@ div {
     display: none;
 }
 
+.blogPostsArea{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    word-spacing: -2px;;
+    line-height: 1.9;
+    font-size: 214%;
+}
+
 .showResults{
     margin: 2%;
-    font-family: 'Gaegu', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     height: auto;
 }
@@ -309,6 +317,13 @@ textarea.textArea.is-visible{
         animation: moveSideways 5s infinite;
     }
 
+    .blogPostsArea{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        word-spacing: -2px;;
+        line-height: 1.9;
+        font-size: 214%;
+    }
 
     .showResults{
         margin: 2%;
@@ -318,12 +333,13 @@ textarea.textArea.is-visible{
     }
 
     .searchButton{
-        width: fit-content;
+        width: 155px;
         padding: 10px;
-        height: 50px;
+        height: 34px;
         margin: 19px;
         position: relative;
         display: grid;
+        background-color: aliceblue;
     }
 
     .createBlog{
@@ -341,6 +357,16 @@ textarea.textArea.is-visible{
 
     textarea.textArea.is-visible{
         visibility: visible;
+    }
+
+    .savePost{
+        width: 155px;
+        padding: 10px;
+        height: 34px;
+        margin: 19px;
+        position: relative;
+        display: grid;
+        background-color: aliceblue;
     }
 
 }
