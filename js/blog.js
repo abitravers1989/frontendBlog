@@ -1,10 +1,11 @@
 
 function init() {
     addEventListener2()
-    clickedCreatePost()
+    // clickedCreatePost()
 }
 
-fetch('https://api.abitravers.com/posts')
+fetch('http://localhost:5000/posts')
+    //fetch('https://api.abitravers.com/posts')
     .then(response => response.json())
     .then(jsonResponse => listBlogs(jsonResponse))
     .catch(function (error) {
@@ -26,14 +27,6 @@ function listBlogs(jsonData) {
     resultsSection.innerHTML = html;
 }
 
-// function clickedSearchButton() {
-
-// }
-
-// function searchTitle() {
-
-// }
-
 function addEventListener2() {
     const showResults = document.querySelector('.showResults');
     showResults.addEventListener('click', goToNewPage)
@@ -45,42 +38,43 @@ function goToNewPage(e) {
     window.location.href = `template.html/?${blogTitle}`
 }
 
-function clickedCreatePost() {
-    const createPostDiv = document.querySelector('.createBlog');
-    createPostDiv.addEventListener('click', createTextBox)
-}
+// function clickedCreatePost() {
+//     const createPostDiv = document.querySelector('.createBlog');
+//     createPostDiv.addEventListener('click', createTextBox)
+// }
 
-function createTextBox() {
-    const textArea = document.querySelector('.textArea');
-    textArea.classList.toggle('is-visible');
-}
+// function createTextBox() {
+//     const textArea = document.querySelector('.textArea');
+//     textArea.classList.toggle('is-visible');
+// }
 
-const textArea = document.querySelector('.textArea');
+// const textArea = document.querySelector('.textArea');
 
-const saveButton = document.getElementsByTagName("button");
-saveButton[1].addEventListener('click', postTexttoAPI);
+// const saveButton = document.getElementsByTagName("button");
+// saveButton[1].addEventListener('click', postTexttoAPI);
 
-function postTexttoAPI() {
-    const headerData = { 'Content-Type': 'application/json', 'clinetPassword': 'xxxxx' }
-    const text = textArea.value
-    const bodyFromPage = { 'content': text, userName: "Abi", title: "NewTest" }
-    try {
-        fetch('https://api.abitravers.com/posts', {
-            method: 'POST',
-            headers: headerData,
-            body: JSON.stringify(bodyFromPage)
+// function postTexttoAPI() {
+//     const headerData = { 'Content-Type': 'application/json', 'clinetPassword': 'xxxxx' }
+//     const text = textArea.value
+//     const bodyFromPage = { 'content': text, userName: "Abi", title: "NewTest" }
+//     try {
+//         //https://api.abitravers.com/posts
+//         fetch('http://localhost:5000/posts', {
+//             method: 'POST',
+//             headers: headerData,
+//             body: JSON.stringify(bodyFromPage)
 
-        })
-            //add stream reader for readablestream
-            .then(function (response) {
-                return console.log("post" + textArea.value + "Response Status" + response.status)
-            })
-    }
-    //add logging in
-    catch (error) {
-        console.log(error);
-    }
-}
+//         })
+//             //add stream reader for readablestream
+//             .then(function (response) {
+//                 return console.log("post" + textArea.value + "Response Status" + response.status)
+//             })
+//     }
+//     //add logging in
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
 
 
 init()
