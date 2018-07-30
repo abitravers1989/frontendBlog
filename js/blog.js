@@ -3,8 +3,7 @@ function init() {
     addEventListener2()
 }
 
-fetch('http://localhost:5000/posts')
-    //fetch('https://api.abitravers.com/posts')
+fetch('https://api.abitravers.com/posts')
     .then(response => response.json())
     .then(jsonResponse => listBlogs(jsonResponse))
     .catch(function (error) {
@@ -14,6 +13,7 @@ fetch('http://localhost:5000/posts')
 const resultsSection = document.querySelector('.showResults')
 
 function listBlogs(jsonData) {
+    console.log("called")
     resultsSection.innerHTML = '';
     let html = '';
     jsonData.forEach(post => {
@@ -48,7 +48,7 @@ function createSearchButton() {
 function createNewPostButton() {
     const createNewPostButton = document.createElement('button');
     createNewPostButton.type = 'submit';
-    createNewPostButton.innerText = 'Search Post Titles';
+    createNewPostButton.innerText = 'Create New Post';
     console.log(resultsSection);
     resultsSection.appendChild(createNewPostButton);
 }
