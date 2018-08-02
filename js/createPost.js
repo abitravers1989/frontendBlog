@@ -5,7 +5,7 @@ function init() {
 var homePageLink = document.querySelector('.homePageLink');
 
 homePageLink.addEventListener('click', function (e) {
-    window.location.replace('https://api.abitravers.com/posts');
+    window.location.replace('http://localhost:8080/blog');
 })
 
 function clickedCreatePost() {
@@ -28,7 +28,7 @@ function postTexttoAPI() {
     const text = textArea.value
     const bodyFromPage = { 'content': text, userName: "Abi", title: "NewTest" }
     try {
-        fetch('https://api.abitravers.com/posts', {
+        fetch('http://localhost:5000/posts', {
             method: 'POST',
             headers: headerData,
             body: JSON.stringify(bodyFromPage)

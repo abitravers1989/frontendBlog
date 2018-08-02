@@ -1,9 +1,10 @@
 
 function init() {
-    addEventListener2()
+    postClicked()
+    createNewPostClickListener()
 }
 
-fetch('https://api.abitravers.com/posts')
+fetch('http://localhost:5000/posts')
     .then(response => response.json())
     .then(jsonResponse => listBlogs(jsonResponse))
     .catch(function (error) {
@@ -13,7 +14,6 @@ fetch('https://api.abitravers.com/posts')
 const resultsSection = document.querySelector('.showResults')
 
 function listBlogs(jsonData) {
-    console.log("called")
     resultsSection.innerHTML = '';
     let html = '';
     jsonData.forEach(post => {
@@ -26,7 +26,7 @@ function listBlogs(jsonData) {
     resultsSection.innerHTML = html;
 }
 
-function addEventListener2() {
+function postClicked() {
     const showResults = document.querySelector('.showResults');
     showResults.addEventListener('click', goToNewPage)
 }
@@ -37,26 +37,38 @@ function goToNewPage(e) {
     window.location.href = `template.html/?${blogTitle}`
 }
 
-function createSearchButton() {
-    const searchButton = document.createElement('button');
-    searchButton.type = 'submit';
-    searchButton.innerText = 'Search Post Titles';
-    console.log(resultsSection);
-    resultsSection.appendChild(searchButton);
-}
+// function createSearchButton() {
+//     const searchButton = document.createElement('button');
+//     searchButton.type = 'submit';
+//     searchButton.innerText = 'Search Post Titles';
+//     console.log(resultsSection);
+//     resultsSection.appendChild(searchButton);
+// }
+
+const buttonPlaceHolder = document.querySelector('.buttonPlaceHolder');
 
 function createNewPostButton() {
     const createNewPostButton = document.createElement('button');
     createNewPostButton.type = 'submit';
     createNewPostButton.innerText = 'Create New Post';
-    console.log(resultsSection);
-    resultsSection.appendChild(createNewPostButton);
+    createNewPostButton.className = "createNewPostButton";
+    console.log(buttonPlaceHolder)
+    buttonPlaceHolder.appendChild(createNewPostButton);
+}
+
+function createNewPostClickListener() {
+    const createNewPostButton = document.getElementsByTagName("button");
+    console.log(createNewPostButton);
+    buttonPlaceHolder.addEventListener('click', goToCreatePostPage)
+}
+
+function goToCreatePostPage(e) {
+    event.stopPropagation();
+    window.location.href = `createPost.html`
 }
 
 init()
-createSearchButton()
-createNewPostButton()
-
+setTimeout(createNewPostButton, 250);
 
 
 

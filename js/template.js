@@ -18,7 +18,7 @@ function upDateTitle(returnedPost) {
   titleSection.innerHTML = returnedPost.title
 }
 
-fetch(`https://api.abitravers.com/posts/${replaced}`)
+fetch(`http://localhost:5000/posts/${replaced}`)
   .then(function (response) {
     return response.json()
   })
