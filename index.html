@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Abis Blog </title>
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>Abi Travers </title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
   <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
@@ -13,128 +14,106 @@
     .h3 {
       font-size: 15px;
     }
-
+  
     .wrapper {
       display: grid;
       /* grid-template-columns: 40% 40% 30%; */
       /* grid-column-gap: 1em;
             grid-row-gap: 1em; */
       grid-gap: 1em;
-
       /* grid-template-columns: 1fr 2fr 1fr; */
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       /* below makes it a fixed size  */
       /* grid-auto-rows: 100px; */
       /* this is flexible: */
       grid-auto-rows: minmax(100px, auto)
       /* by default 100px but will stretch out .. only targeting first row that fall within repeat which is first 3 */
     }
-
-
     .wrapper>div {
-      margin-top: 125px;
-
-      padding: 1em;
+      margin-top: 5px;
+      margin-right: 0.5%;
+      margin-left: 0.5%;
+    }
+    .wrapper>div:nth-child(odd) {
+ 
+    }
+    .wrapper> .hero-text-wrap {
+      background: #F7F7F7
+    }
+    .wrapper> .thirdSplit > div{
+      border: 1px solid black;
+      margin: 2%;
     }
 
+    /* .wrapper>div:nth-child(2n) {
+      background:#eee;
+    } */
 
-    .wrapper>div:nth-child(odd) {
+    .thirdSplit {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0%;
+    }
 
-      padding: 1em;
+    .thirdSplit >div {
+ 
+    }
+
+    .hero-text-wrap {
+      font-family: Mercury Text G1 A, Mercury Text G1 B, serif;
+      height: 90vh;
+      padding: 10px;
+    }
+
+    .hero-text-wrap> h4 { 
+      margin-top: 10%; 
+      text-align: center;
+    }
+
+    .hero-text-wrap> h1 {  
+      font-size: 800%;
+      text-align: center;
+    }
+
+    .hero-text-wrap> h3 { 
+      text-align: center; 
     }
 
     :root {
-
       --lightgrey: #F7F7F7;
       --darkblue: #00151C;
       --blue: #002C4C;
       --midblue: #17A6D6;
       --lighblue: #17A6D6;
-
     }
 
-
     body {
-
       font-size: 1rem;
       min-height: 100vh;
       align-items: center;
       background: linear-gradient(to bottom, var(--blue) 0%, var(--lighblue) 100%);
-
     }
 
     #results {
       margin: 5%;
       font-family: 'Gaegu', cursive;
       font-size: 6rem;
-
     }
 
-    .cloudwrapper {
-      padding: 1em;
-    }
+    
 
-    .cloud {
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      position: absolute;
-      left: -250px;
-      box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-      /* z-index: -9; */
-      animation: move 5s infinite;
-    }
 
-    @keyframes move {
-      from {
-        top: 0px;
-      }
-      to {
-        top: 90%;
-      }
-    }
-
-    @keyframes moveSideways {
-      from {
-        left: 0px;
-      }
-      to {
-        left: 96%;
-      }
-    }
-
-    .cloud2 {
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      position: absolute;
-      left: -250px;
-      box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-      /* z-index: -9; */
-    }
-
-    .cloud3 {
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      position: absolute;
-      left: 0%;
-      box-shadow: 350px 25px white, 380px 5px white, 410px 25px white, 380px 25px white;
-      /* z-index: -9; */
-      animation: moveSideways 5s infinite;
-    }
   </style>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Abis Blog</a>
+      <!-- <a class="navbar-brand" href="#">Abi Travers</a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -143,11 +122,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog Posts</a>
+            <a class="nav-link" href="#blog">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#about">CV</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#about">Photography</a>
+            </li>
         </ul>
         <!-- <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -157,28 +139,38 @@
     </nav>
   </header>
 
+
   <div class="wrapper">
-    <div>Hi my blog is about the things I learn while coding. </div>
+      <!-- <canvas id="canvas" width="400" height="600%">
+          This text is displayed if your browser does not support HTML5 Canvas.
+         </canvas> -->
+      <div class="hero-text-wrap" >
+            <h4>HELLO PEOPLE, MY NAME IS</h4>
+            <h1>ABI TRAVERS</h1>
+     
+      </div>
+      <div class="thirdSplit"> 
+          <div>SOFTWARE ENGINEER. <p> </p> <p>
+            Blogger. Conference speaker. Coach and Teacher.  LINK TO GITHUB.
+          </p> </div>
+          <div> 
+              <p> <a href="https://www.flaticon.com/authors/good-ware"></a></p>
+           <p> GROWTH HACKER. </p>
+             <p> 
 
-
-
+          </p> <p> Private consultations. Blog.</p> </div>
+          <div>ADVENTURER. <p> </p> <p> Have travelled to 49 different countries and lived in 3 including Vietnam & Indonesia. Photography. </p> </div>
+      </div>
     <div>
       this is me learn css grid
     </div>
-
     <div>Hi my blog is about the things I learn while coding. </div>
-
     <div>
       this is me learn css grid
     </div>
-
-
-
 
     <div>
       <section class="mt-5" id="results"></section>
-
-
     </div>
 
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
@@ -192,40 +184,26 @@
 
 
 
-    <div id="footer" class="footer wrapper">
+    <div id="footer" class="wrapper">
       <div class="container">
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-lg-4 col-md-4">
-            <span class="footer-white">
+            <span class="footer-white"> -->
               <h4>&copy; Abi Travers.</h4>
-              <p>
-                <i class="fa fa-envelope" aria-hidden="flase"></i> abi.travers@bgl.com </p>
-            </span>
-
-          </div>
-          <div class="col-lg-4 col-md-4">
+            
+                <i class="fa fa-envelope" aria-hidden="flase"></i> abi.travers@bgl.com 
             <img class="slice-footer" src="http://blackpizza.com/wp-content/uploads/2014/12/slice-pizza.png" alt="Pizz and love" />
-          </div>
-          <div class="col-lg-4 col-md-4"></div>
-          <h4> Social Media Links</h4>
-        </div>
       </div>
     </div>
 
-  </div>
-
-
-  </div>
-
+<!-- 
   <div class="cloudwrapper">
     <div class="cloud"></div>
 
     <div class="cloud2 wrapper"></div>
     <div class="cloud3 wrapper"></div>
 
-  </div>
-
-
+  </div> -->
 
 </body>
 
