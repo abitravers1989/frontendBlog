@@ -37,14 +37,6 @@ function goToNewPage(e) {
     window.location.href = `template.html/?${blogTitle}`
 }
 
-// function createSearchButton() {
-//     const searchButton = document.createElement('button');
-//     searchButton.type = 'submit';
-//     searchButton.innerText = 'Search Post Titles';
-//     console.log(resultsSection);
-//     resultsSection.appendChild(searchButton);
-// }
-
 const buttonPlaceHolder = document.querySelector('.buttonPlaceHolder');
 
 function createNewPostButton() {

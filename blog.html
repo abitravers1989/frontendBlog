@@ -1,64 +1,111 @@
-<!doctype html>
-
-<html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, inital-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
-    <title>Abi Travers Blog</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="/css/blog.css">
-    <link rel="icon" href="https://antoni.de/wp-content/themes/antoni/favicon.png">
+  <style>
+    body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
 
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn { 
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn { 
+    width: 100%;
+    padding: 0;
+  }
+}
+    </style>
 </head>
 
-<body>
-    <!-- <div class="container content-wrap" id="page-container"> -->
-    <nav>
-        <ul class="navigation">
-            <li>
-                <a class="nav-link" href="index.html"> Home </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/game/game.html"> Game </a>
-            </li>
-            <li>
-                <a class="nav-link" href="/map.html"> Photography </a>
-            </li>
-            <li>
-                <a id="ajerez" href="http://www.ajerez.es" target="_blank">
-                    <img src="https://i.imgur.com/MzfXtni.png" />
-                </a>
-            </li>
-        </ul>
-    </nav>
 
-    <div class="pageWrapper">
+<div class="header">
+  <h2>Blog Name</h2>
+</div>
 
-        <section class="topWrapper background-header-image">
-            <h1 class="blogTitle">Blog Title</h1>
-            <div class="cloudwrapper">
-                <div class="cloud"></div>
-                <div class="cloud2 wrapper"></div>
-                <div class="cloud3 wrapper"></div>
-            </div>
-        </section>
-
-        <section>
-            <div class="showPostsWrapper">
-                <div class="blogPostsArea"> Blog Posts </div>
-                <ul class="showResults"></ul>
-                <!-- <button class="searchButton" type="submit">Search Post Titles</button> -->
-            </div>
-            <div class="buttonPlaceHolder"></div>
-
-        </section>
-        <br>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
-    <script src="/js/blog.js"></script>
-</body>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
 
-</html>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
