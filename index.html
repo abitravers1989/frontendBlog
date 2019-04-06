@@ -29,29 +29,24 @@
       grid-auto-rows: minmax(100px, auto)
       /* by default 100px but will stretch out .. only targeting first row that fall within repeat which is first 3 */
     }
-    .wrapper>div {
-      margin-top: 5px;
-      margin-right: 0.5%;
-      margin-left: 0.5%;
-    }
-    .wrapper>div:nth-child(odd) {
- 
-    }
+
+
     .wrapper> .hero-text-wrap {
-      background-image: url("https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/56247786_10156658934693692_901076407759667200_n.jpg?_nc_cat=104&_nc_ht=scontent-lht6-1.xx&oh=be900ec45ea8ec73421bfe2b91f78fab&oe=5D40FAC1");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/17264973_10155315845188984_3593609084472022706_n.jpg?_nc_cat=106&_nc_ht=scontent-lht6-1.xx&oh=039a4081f31cb41d55c8635478b5fd36&oe=5D3C9007");
       height:100vh;
       width:100vw;
       display:block;
       content: " ";
       margin:0;
       padding:0;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
-      margin-left: 2px; 
+      margin-left: 3px;
     }
     .wrapper> .thirdSplit > div{
       border: 1px solid black;
       margin: 2%;
+      padding: 2%;
     }
 
     /* .wrapper>div:nth-child(2n) {
@@ -73,16 +68,29 @@
 
     .hero-text-wrap> h4 { 
       margin-top: 10%; 
-      text-align: center;
+      text-align: left;
+      color: white;
+      margin: 1%;
+    padding-top: 40vh;
+    padding-bottom: 0px;
+    margin-left: 2%;
+    font-size: 250%;
     }
 
     .hero-text-wrap> h1 {  
-      font-size: 800%;
-      text-align: center;
+      font-size: 550%;
+      text-align: left;
+      color: white;
+    margin: 1%;
+    
     }
 
     .hero-text-wrap> h3 { 
       text-align: center; 
+    }
+
+    .navbar {
+      margin-left: 3px;
     }
 
     :root {
@@ -106,30 +114,11 @@
       font-size: 6rem;
     }
 
-    .random_div {
-      background-image: url("https://images.pexels.com/photos/709481/pexels-photo-709481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-      height:100vh;
-      width:100%;
-      display:block;
-      content: " ";
-      margin:0;
-      padding:0;
-      background-size: contain;
-      background-repeat: no-repeat;
+    .panel {
+      margin: 0.9%;
     }
 
-    .me_hero {
-      background-image: url("https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/17264973_10155315845188984_3593609084472022706_n.jpg?_nc_cat=106&_nc_ht=scontent-lht6-1.xx&oh=039a4081f31cb41d55c8635478b5fd36&oe=5D3C9007");
-      height:100vh;
-      width:100%;
-      display:block;
-      content: " ";
-      margin:0;
-      padding:0;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
+/* 
     .second_me_hero {
       background-image: url("https://scontent-lht6-1.xx.fbcdn.net/v/t31.0-8/12778695_10153645257288692_6490738493704289042_o.jpg?_nc_cat=104&_nc_ht=scontent-lht6-1.xx&oh=7aae329fb6df73d319b6b092f4a7a12b&oe=5D39B28C");
       height:100vh;
@@ -140,7 +129,7 @@
       padding:0;
       background-size: contain;
       background-repeat: no-repeat;
-    }
+    } */
 
 
   </style>
@@ -185,11 +174,11 @@
           This text is displayed if your browser does not support HTML5 Canvas.
          </canvas> -->
       <div class="hero-text-wrap" >
-           
+        <h4>HI, MY NAME IS</h4>
+        <h1>ABI TRAVERS</h1>
      
       </div>
-      <div class="me_hero"></div>
-      <div class="second_me_hero"></div>
+
 
       <div class="thirdSplit"> 
           <div>SOFTWARE ENGINEER. <p> </p> <p>
@@ -202,6 +191,21 @@
 
           </p> <p> Private consultations. Blog.</p> </div>
           <div>ADVENTURER. <p> </p> <p> Have travelled to 49 different countries and lived in 3 including Vietnam & Indonesia. Photography. </p> </div>
+      </div>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+        <div class="panel-body">
+          <p>My latest blog posts</p>
+        </div>
+        <!-- List group -->
+        <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
       </div>
     <div>
       this is me learn css grid
